@@ -1,13 +1,31 @@
 .webapp-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
     overflow-x: auto;
     white-space: nowrap;
     background: url('https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002039/GSFC_20171208_Archive_e002039~medium.jpg') repeat-x;
     height: 1080px;
     width: auto;
+    text-align: center;
+    padding-left: 200px;
+    /* temporary styling */
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
 }
 
+/* style for each space item */
 .space-content {
-    display: inline-block;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 200px;
     width: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-image: url("/img/planet-placeholder.png");
 }
