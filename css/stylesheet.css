@@ -1,0 +1,13 @@
+.webapp-main {
+    overflow-x: auto;
+    white-space: nowrap;
+    background: url('https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002039/GSFC_20171208_Archive_e002039~medium.jpg') repeat-x;
+    height: 1080px;
+    width: auto;
+}
+
+.space-content {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
