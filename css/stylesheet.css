@@ -29,3 +29,16 @@
     margin-right: 50px;
     background-image: url("/img/planet-placeholder.png");
 }
+
+.space-content-title {
+    font-size: 20px;
+    position: relative;
+    top: 120px;
+    color: white ;
+}
+.space-content-description {
+    font-size: 15px;
+    position: relative;
+    top: 140px;
+    color: white ;
+}
