@@ -8,6 +8,7 @@
 
 // 10px == 1000km
 
+//created a class for planets to build objects for each planet.
 class Planet {
     constructor(radius, color, name, description) {
       this.radius = radius;
@@ -39,8 +40,14 @@ function generateBackground() {
 }
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
 function populateSun() {
+    document.getElementById("planetShape").style.backgroundColor = sun.color;
     document.getElementById("sunTitle").innerHTML = sun.name;
     document.getElementById("sunDescription").innerHTML = sun.description;
+}
+function populateMercury() {
+    document.getElementById("planetShape").style.backgroundColor = mercury.color;
+    document.getElementById("sunTitle").innerHTML = mercury.name;
+    document.getElementById("sunDescription").innerHTML = mercury.description;
 }
 //creating new planets from my Planet Class above.
 const sun = new Planet(6963.4, "Yellow", "Sun", "The Sun is the star at the center of the Solar System.");
