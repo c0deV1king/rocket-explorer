@@ -27,6 +27,7 @@
     width: 400px;
     margin-left: 50px;
     margin-right: 50px;
+    padding-right: 250px;
 }
 
 .space-content-title {
@@ -42,7 +43,34 @@
     color: white ;
 }
 
-#planetShape {
+#planetSun {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetMercury {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetVenus {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetEarth {
     width: 200px;
     height: 200px;
     border-radius: 50%;

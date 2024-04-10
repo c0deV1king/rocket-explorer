@@ -39,15 +39,27 @@ function generateBackground() {
 
 }
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
+
+//look into Arrays to deal with this
 function populateSun() {
-    document.getElementById("planetShape").style.backgroundColor = sun.color;
+    document.getElementById("planetSun").style.backgroundColor = sun.color;
     document.getElementById("sunTitle").innerHTML = sun.name;
     document.getElementById("sunDescription").innerHTML = sun.description;
 }
 function populateMercury() {
-    document.getElementById("planetShape").style.backgroundColor = mercury.color;
-    document.getElementById("sunTitle").innerHTML = mercury.name;
-    document.getElementById("sunDescription").innerHTML = mercury.description;
+    document.getElementById("planetMercury").style.backgroundColor = mercury.color;
+    document.getElementById("mercuryTitle").innerHTML = mercury.name;
+    document.getElementById("mercuryDescription").innerHTML = mercury.description;
+}
+function populateVenus() {
+    document.getElementById("planetVenus").style.backgroundColor = venus.color;
+    document.getElementById("venusTitle").innerHTML = venus.name;
+    document.getElementById("venusDescription").innerHTML = venus.description;
+}
+function populateEarth() {
+    document.getElementById("planetEarth").style.backgroundColor = earth.color;
+    document.getElementById("earthTitle").innerHTML = earth.name;
+    document.getElementById("earthDescription").innerHTML = earth.description;
 }
 //creating new planets from my Planet Class above.
 const sun = new Planet(6963.4, "Yellow", "Sun", "The Sun is the star at the center of the Solar System.");
@@ -65,3 +77,4 @@ const saturn = new Planet(58.232, "Yellow", "Saturn", "Saturn is the sixth plane
 const uranus = new Planet(25.362, "Blue", "Uranus", "Uranus is the seventh planet from the Sun.");
 const neptune = new Planet(24.622, "Blue", "Neptune", "Neptune is the eighth planet from the Sun.");
 const pluto = new Planet(1.1883, "Brown", "Pluto", "Pluto is the ninth planet from the Sun.");
+
