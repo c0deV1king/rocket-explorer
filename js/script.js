@@ -78,3 +78,48 @@ const uranus = new Planet(25.362, "Blue", "Uranus", "Uranus is the seventh plane
 const neptune = new Planet(24.622, "Blue", "Neptune", "Neptune is the eighth planet from the Sun.");
 const pluto = new Planet(1.1883, "Brown", "Pluto", "Pluto is the ninth planet from the Sun.");
 
+// click and drag scrolling
+// document(points towards the html document)
+// addEventListener(called a "method". It basically listens for an event that is inputed in the code, in the brackets)
+// DOMContentLoaded(Is an event that waits until the HTML is all loaded before executing the code inside of it)
+document.addEventListener("DOMContentLoaded", function() {
+
+    // querySelector(searches for the first element in the html that matches the name in brackets)
+    // in this case, it is searching for my class "webapp-main"
+const clickAndDragScroll = document.querySelector(".webapp-main");
+// debugging line of code, it tells me what is going on with the var, null if nothing.
+console.log("clickAndDragScroll:", clickAndDragScroll);
+// declaring variables for the events
+// setting the default value of my mouse click to false, meaning my left mouse button is not currently clicked.
+let isDown = false;
+let startX;
+let scrollLeft;
+// a event + a function, listening for when my left mouse button is clicked down and held.
+// the e in brackets is short for event, just a quicker way to write it.
+clickAndDragScroll.addEventListener("mousedown", function(e) {
+    // the value is being set to true, now that my mouse is clicked down.
+    isDown = true;
+    // assigning a value to the variable startX. it is the x position of the mouse on the page minus the left offset of the element.
+    startX = e.pageX - clickAndDragScroll.offsetLeft;
+    // assigning a value to the variable scrollLeft. it is the current scroll position of the element.
+    scrollLeft = clickAndDragScroll.scrollLeft;
+});
+// same as above but it is listening for the user to release the left mouse button.
+clickAndDragScroll.addEventListener("mouseleave", function() {
+    isDown = false;
+});
+// basically the same thing, when the user releases the left mouse button, it calls both events.
+clickAndDragScroll.addEventListener("mouseup", function() {
+    isDown = false;
+});
+
+clickAndDragScroll.addEventListener("mousemove", function(e) {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - clickAndDragScroll.offsetLeft;
+    const scroll = x - startX;
+    clickAndDragScroll.scrollLeft = scrollLeft - scroll;
+});
+});
+
+// add a function to stop the user from highlighting text when they click and drag.
