@@ -114,7 +114,9 @@ clickAndDragScroll.addEventListener("mouseup", function() {
 });
 
 clickAndDragScroll.addEventListener("mousemove", function(e) {
+// checks if the statement is false, if it is, it stops executing the if statement
     if (!isDown) return;
+// preventDefault basically stops the default actions of the event, in this case it is the mouse move.
     e.preventDefault();
     const x = e.pageX - clickAndDragScroll.offsetLeft;
     const scroll = x - startX;
