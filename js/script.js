@@ -2,9 +2,9 @@
 
 // use url: link + NasaKey
 
-// Create 12 other objects
-// changing color of planets
-// click and drag
+// - Nice looking progress bar at the bottom to show how far you are
+// - Animated rocketship that moves with bar
+// - Show object for planets(circle), on click effect to show something
 
 // 10px == 1000km
 
@@ -61,22 +61,54 @@ function populateEarth() {
     document.getElementById("earthTitle").innerHTML = earth.name;
     document.getElementById("earthDescription").innerHTML = earth.description;
 }
+
 //creating new planets from my Planet Class above.
-const sun = new Planet(6963.4, "Yellow", "Sun", "The Sun is the star at the center of the Solar System.");
-const mercury = new Planet(2.4397, "Gray", "Mercury", "Mercury is the smallest planet in our solar system.");
-const venus = new Planet(6.0518, "Yellow", "Venus", "Venus is the second planet from the Sun.");
-const earth = new Planet(6.371, "Blue", "Earth", "Earth is the third planet from the Sun.");
-const moon = new Planet(1.737, "Gray", "Moon", "The Moon is Earth's only natural satellite.");
-const mars = new Planet(3.3895, "Red", "Mars", "Mars is the fourth planet from the Sun.");
-const jupiter = new Planet(69.911, "Orange", "Jupiter", "Jupiter is the fifth planet from the Sun.");
-const io = new Planet(1.821, "Yellow", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter.");
-const europa = new Planet(1.56, "White", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter.");
-const ganymede = new Planet(2.634, "White", "Ganymede", "Ganymede is the largest moon of Jupiter.");
-const callisto = new Planet(2.4, "White", "Callisto", "Callisto is the second-largest moon of Jupiter.");
-const saturn = new Planet(58.232, "Yellow", "Saturn", "Saturn is the sixth planet from the Sun.");
-const uranus = new Planet(25.362, "Blue", "Uranus", "Uranus is the seventh planet from the Sun.");
-const neptune = new Planet(24.622, "Blue", "Neptune", "Neptune is the eighth planet from the Sun.");
-const pluto = new Planet(1.1883, "Brown", "Pluto", "Pluto is the ninth planet from the Sun.");
+const planets = [
+    new Planet(6963.4, "Yellow", "Sun", "The Sun is the star at the center of the Solar System."),
+    new Planet(2.4397, "Gray", "Mercury", "Mercury is the smallest planet in our solar system."),
+    new Planet(6.0518, "Yellow", "Venus", "Venus is the second planet from the Sun."),
+    new Planet(6.371, "Blue", "Earth", "Earth is the third planet from the Sun."),
+    new Planet(1.737, "Gray", "Moon", "The Moon is Earth's only natural satellite."),
+    new Planet(3.3895, "Red",  "Mars", "Mars is the fourth planet from the Sun."),
+    new Planet(69.911, "Orange", "Jupiter", "Jupiter is the fifth planet from the Sun."),
+    new Planet(1.821, "Yellow", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter."),
+    new Planet(1.56, "White", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter."),
+    new Planet(2.634, "White", "Ganymede", "Ganymede is the largest moon of Jupiter."),
+    new Planet(2.4, "White", "Callisto", "Callisto is the second-largest moon of Jupiter."),
+    new Planet(58.232, "Yellow", "Saturn", "Saturn is the sixth planet from the Sun."),
+    new Planet(25.362, "Blue", "Uranus", "Uranus is the seventh planet from the Sun."),
+    new Planet(24.622, "Blue", "Neptune", "Neptune is the eighth planet from the Sun."),
+    new Planet(1.1883, "Brown", "Pluto", "Pluto is the ninth planet from the Sun.")
+]
+
+function generatePlanets(planetsList) {
+    var webappMain = document.getElementById("webapp-main");
+    for (let i = 0; i < planetsList.length; i++) {
+
+        var planet = planetsList[i];
+
+        var outerDiv = document.createElement("div");
+        outerDiv.className = "space-content";
+
+        var planetDiv = document.createElement("div");
+        planetDiv.id = "planet" + planet.name;
+
+        var contentTitle = document.createElement("h1");
+        contentTitle.className = "space-content-title";
+        contentTitle.id = planet.name.toLowerCase() + "Title";
+        contentTitle.textContent = planet.title;
+
+        var contentDescription = document.createElement("h1");
+        contentDescription.className = "space-content-description";
+        contentDescription.id = planet.name.toLowerCase() + "Description";
+        contentDescription.textContent = planet.description;
+
+        outerDiv.appendChild(planetDiv);
+        outerDiv.appendChild(contentTitle);
+        outerDiv.appendChild(contentDescription);
+        webappMain.appendChild(outerDiv);
+    }
+}
 
 // click and drag scrolling
 // document(points towards the html document)
@@ -122,6 +154,7 @@ clickAndDragScroll.addEventListener("mousemove", function(e) {
     const scroll = x - startX;
     clickAndDragScroll.scrollLeft = scrollLeft - scroll;
 });
+generatePlanets(planets);
 });
 
 // add a function to stop the user from highlighting text when they click and drag.
