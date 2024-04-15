@@ -39,29 +39,6 @@ function generateBackground() {
 
 }
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
-
-//look into Arrays to deal with this
-function populateSun() {
-    document.getElementById("planetSun").style.backgroundColor = sun.color;
-    document.getElementById("sunTitle").innerHTML = sun.name;
-    document.getElementById("sunDescription").innerHTML = sun.description;
-}
-function populateMercury() {
-    document.getElementById("planetMercury").style.backgroundColor = mercury.color;
-    document.getElementById("mercuryTitle").innerHTML = mercury.name;
-    document.getElementById("mercuryDescription").innerHTML = mercury.description;
-}
-function populateVenus() {
-    document.getElementById("planetVenus").style.backgroundColor = venus.color;
-    document.getElementById("venusTitle").innerHTML = venus.name;
-    document.getElementById("venusDescription").innerHTML = venus.description;
-}
-function populateEarth() {
-    document.getElementById("planetEarth").style.backgroundColor = earth.color;
-    document.getElementById("earthTitle").innerHTML = earth.name;
-    document.getElementById("earthDescription").innerHTML = earth.description;
-}
-
 //creating new planets from my Planet Class above.
 const planets = [
     new Planet(6963.4, "Yellow", "Sun", "The Sun is the star at the center of the Solar System."),
@@ -92,11 +69,12 @@ function generatePlanets(planetsList) {
 
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
+        planetDiv.style.backgroundColor = "planet" + planet.color;
 
         var contentTitle = document.createElement("h1");
         contentTitle.className = "space-content-title";
         contentTitle.id = planet.name.toLowerCase() + "Title";
-        contentTitle.textContent = planet.title;
+        contentTitle.textContent = planet.name;
 
         var contentDescription = document.createElement("h1");
         contentDescription.className = "space-content-description";
