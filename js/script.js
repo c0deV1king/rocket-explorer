@@ -69,7 +69,7 @@ function generatePlanets(planetsList) {
 
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
-        planetDiv.style.backgroundColor = "planet" + planet.color;
+        planetDiv.style.backgroundColor = planet.color;
 
         var contentTitle = document.createElement("h1");
         contentTitle.className = "space-content-title";
