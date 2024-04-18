@@ -58,36 +58,60 @@ const planets = [
     new Planet(1.1883, "Brown", "Pluto", "Pluto is the ninth planet from the Sun.")
 ]
 
+// a function with a for loop that dynamically generates planets on the html document
 function generatePlanets(planetsList) {
+    // grabbing the element with the id "webapp-main" and assigning it to the variable webappMain
     var webappMain = document.getElementById("webapp-main");
+    // a for loop, set to go through the array made above one by one to create my html elements
+    // sets i to be 0 which is the beginning on the array (0 == 1) then it evaluates if i is less than the length of the array,
+    // finally it increments i by 1 each time it goes through the loop.
     for (let i = 0; i < planetsList.length; i++) {
-
+        // creating the variable "planet" and assigning it to the current planet in the array. 
         var planet = planetsList[i];
-
+        // creating the container
         var outerDiv = document.createElement("div");
         outerDiv.className = "space-content";
-
+        // creating the planet visual
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
         planetDiv.style.backgroundColor = planet.color;
-
+        // creating the planet title
         var contentTitle = document.createElement("h1");
         contentTitle.className = "space-content-title";
         contentTitle.id = planet.name.toLowerCase() + "Title";
         contentTitle.textContent = planet.name;
-
+        // creating the planet description
         var contentDescription = document.createElement("h1");
         contentDescription.className = "space-content-description";
         contentDescription.id = planet.name.toLowerCase() + "Description";
         contentDescription.textContent = planet.description;
-
+        // appending the elements to the html document
         outerDiv.appendChild(planetDiv);
         outerDiv.appendChild(contentTitle);
         outerDiv.appendChild(contentDescription);
         webappMain.appendChild(outerDiv);
     }
+    // calling the addEventListeners function to add event listeners to the planets
+    addEventListeners(planetsList);
+}
+// create a function to add event listeners to the planets, simular to above, it goes through the array one by one.
+function addEventListeners(planetsList) {
+    for (let i = 0; i < planetsList.length; i++) {
+        var planet = planetsList[i];
+        var planetDiv = document.getElementById("planet" + planet.name);
+        // passes the planetDiv and planet to the planetClickDetails function below
+        planetClickDetails(planetDiv, planet);
+    }
+}
+// a function that has an onclick event to apply to the planets
+// console log for debugging/testing
+function planetClickDetails(planetDiv, planet) {
+    planetDiv.addEventListener("click", (event) => {
+        console.log("planet clicked:", planet.name);
+    });
 }
 
+    
 // click and drag scrolling
 // document(points towards the html document)
 // addEventListener(called a "method". It basically listens for an event that is inputed in the code, in the brackets)
