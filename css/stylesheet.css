@@ -1,19 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
 .webapp-main {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-shrink: 0;
     overflow-x: auto;
     white-space: pre-wrap;
     background: url('https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002039/GSFC_20171208_Archive_e002039~medium.jpg') repeat-x;
-    height: 1080px;
-    width: auto;
+    height: 800px;
+    width: 800px;
     text-align: center;
-    padding-left: 6500px;
+    padding-left: 800px;
     /* temporary styling */
     border-style: solid;
     border-color: black;
     border-width: 5px;
+    margin-left: 150px;
+    margin-top: 125px;
 }
 
 /* style for each space item */
@@ -40,6 +45,21 @@
     position: relative;
     top: 140px;
     color: white ;
+}
+
+.progress-bar {
+    height: 100px;
+    width: 1000px;
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
+    height: 10px;
+    width: 10000px;
+    background-color: #f1f1f1;
 }
 
 #planetSun {

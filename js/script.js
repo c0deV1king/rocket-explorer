@@ -4,7 +4,7 @@
 
 // - Nice looking progress bar at the bottom to show how far you are
 // - Animated rocketship that moves with bar
-// - Show object for planets(circle), on click effect to show something
+// - Show object for planets(circle), on click effect to show something x
 
 // 10px == 1000km
 
@@ -156,6 +156,7 @@ clickAndDragScroll.addEventListener("mousemove", function(e) {
     const scroll = x - startX;
     clickAndDragScroll.scrollLeft = scrollLeft - scroll;
 });
+
 generatePlanets(planets);
 });
 
