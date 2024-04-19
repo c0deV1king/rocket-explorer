@@ -3,11 +3,13 @@ body {
     padding: 0;
     background-color: black;
 }
+
 .webapp-main {
     display: flex;
     align-items: center;
-    overflow-x: auto;
-    white-space: pre-wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* white-space: pre-wrap; */
     background: url('https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002039/GSFC_20171208_Archive_e002039~medium.jpg') repeat-x;
     height: 800px;
     width: 800px;
@@ -48,17 +50,17 @@ body {
 }
 
 .progress-bar {
-    height: 100px;
-    width: 1000px;
+    position: absolute;
+    display: grid;
+    top: 750px;
+    left: 450px;
+    right: 500px;
+    bottom: 500px;
 }
 
 .bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 350px;
-    height: 10px;
-    width: 10000px;
+    height: 3px;
+    width: 1000px;
     background-color: #f1f1f1;
 }
 

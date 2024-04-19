@@ -110,7 +110,6 @@ function planetClickDetails(planetDiv, planet) {
         console.log("planet clicked:", planet.name);
     });
 }
-
     
 // click and drag scrolling
 // document(points towards the html document)
