@@ -110,6 +110,8 @@ function planetClickDetails(planetDiv, planet) {
         console.log("planet clicked:", planet.name);
     });
 }
+
+
     
 // click and drag scrolling
 // document(points towards the html document)
@@ -155,6 +157,22 @@ clickAndDragScroll.addEventListener("mousemove", function(e) {
     const scroll = x - startX;
     clickAndDragScroll.scrollLeft = scrollLeft - scroll;
 });
+
+// Progress bar
+// declaring variables and assigning doc elements
+var webappWidth = document.documentElement.scrollWidth;
+var scrollBar = document.querySelector(".webapp-main");
+var barElement = document.querySelector(".bar");
+// onscroll event to find the scroll position and applying it to some css to animate the progress bar
+    if (scrollBar) {
+        scrollBar.onscroll = function() {
+            console.log("Hor Scroll Position:", scrollBar.scrollLeft);
+
+            var percentageScrolled = (scrollBar.scrollLeft / webappWidth) * 100;
+
+            barElement.style.width = percentageScrolled + "%";
+        }
+    };
 
 generatePlanets(planets);
 });
