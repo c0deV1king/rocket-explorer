@@ -111,6 +111,17 @@ function planetClickDetails(planetDiv, planet) {
     });
 }
 
+function findPlanet() {
+    let input = document.getElementById("planetSearch").value;
+    // lambda function
+    let planet = planets.find(plan => plan.name.toLowerCase() === input.trim().toLowerCase());
+    if (planet) {
+        console.log(`We found the planet ${planet.name}`);
+    }
+    else {
+        console.log("We couldn't find the planet");
+    }
+}
 
     
 // click and drag scrolling
@@ -168,7 +179,7 @@ var barElement = document.querySelector(".bar");
         scrollBar.onscroll = function() {
             console.log("Hor Scroll Position:", scrollBar.scrollLeft);
 
-            var percentageScrolled = (scrollBar.scrollLeft / webappWidth) * 100;
+            var percentageScrolled = (scrollBar.scrollLeft / webappWidth) * 10;
 
             barElement.style.width = percentageScrolled + "%";
         }
