@@ -4,7 +4,7 @@
 
 An interactive side scrolling webapp, showcasing the most well known planets/moons/stars and man-made objects such as satellites and rockets. Rocket Explorer is intended to be educational and a learning experince for me, the creator, but welcomes anyone to enjoy the content and maybe learn something new about the solar system!
 
-To view the site, [Click Here!](https://codeviking.io)
+To view the site, [Click Here!](https://rocket-explorer.codeviking.io/)
 
 > [!IMPORTANT]
 > __Please keep in mind that this app is currently a work in progress and will not reflect the end result!__
