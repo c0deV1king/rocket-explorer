@@ -2,12 +2,6 @@
 
 // use url: link + NasaKey
 
-// - Nice looking progress bar at the bottom to show how far you are
-// - Animated rocketship that moves with bar
-// - Show object for planets(circle), on click effect to show something x
-
-// 10px == 1000km
-
 //created a class for planets to build objects for each planet.
 class Planet {
     constructor(radius, color, name, description) {
