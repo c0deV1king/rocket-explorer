@@ -117,6 +117,8 @@ function findPlanet() {
     }
 }
 
+
+
     
 // click and drag scrolling
 // document(points towards the html document)
