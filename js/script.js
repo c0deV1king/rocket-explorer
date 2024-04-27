@@ -175,7 +175,7 @@ var barElement = document.querySelector(".bar");
         scrollBar.onscroll = function() {
             console.log("Hor Scroll Position:", scrollBar.scrollLeft);
 
-            var percentageScrolled = (scrollBar.scrollLeft / webappWidth) * 10;
+            var percentageScrolled = (scrollBar.scrollLeft / webappWidth) * 13.4163;
 
             barElement.style.width = percentageScrolled + "%";
         }
