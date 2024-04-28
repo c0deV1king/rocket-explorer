@@ -1,3 +1,4 @@
+#mainPage {overflow: hidden;}
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@ body {
     height: 100vh;
     width: 100vh;
     text-align: center;
-    padding-left: 800px;
+    padding-left: 70%;
 }
 
 #planetSearchBar {
@@ -52,17 +53,16 @@ body {
 
 .progress-bar {
     position: absolute;
-    display: grid;
     top: 750px;
-    left: 450px;
-    right: 500px;
     bottom: 500px;
+    width: 80%;
+    left: 30%;
 }
 
 .bar {
     height: 3px;
     width: 0px;
-    max-width: 1000px;
+    max-width: 100%;
     background-color: #f1f1f1;
 }
 
