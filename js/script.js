@@ -4,9 +4,9 @@
 
 //created a class for planets to build objects for each planet.
 class Planet {
-    constructor(radius, color, name, description) {
+    constructor(radius, image, name, description) {
       this.radius = radius;
-      this.color = color;
+      this.image = image;
       this.name = name;
       this.description = description;
     }
@@ -32,6 +32,10 @@ function generateBody() {
 function generateBackground() {
 
 }
+
+let newImage = new Image();
+newImage.src = "/img/sun-planet.png";
+newImage.sizes = "256px";
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
 //creating new planets from my Planet Class above.
 const planets = [
@@ -68,7 +72,6 @@ function generatePlanets(planetsList) {
         // creating the planet visual
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
-        planetDiv.style.backgroundColor = planet.color;
         // creating the planet title
         var contentTitle = document.createElement("h1");
         contentTitle.className = "space-content-title";
