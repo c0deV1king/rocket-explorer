@@ -4,13 +4,25 @@
 
 //created a class for planets to build objects for each planet.
 class Planet {
-    constructor(radius, image, name, description) {
+    constructor(radius, fog, name, description) {
       this.radius = radius;
-      this.image = image;
+      this.fog = fog;
       this.name = name;
       this.description = description;
     }
   }
+
+  const colorMap = {
+    red: "rgba(255, 0, 0, 0.5)",
+    green: "rgba(0, 128, 0, 0.5)",
+    blue: "rgba(0, 0, 255, 0.5)",
+    yellow: "rgba(255, 255, 0, 0.5)",
+    purple: "rgba(128, 0, 128, 0.5)",
+    orange: "rgba(255, 165, 0, 0.5)",
+    black: "rgba(0, 0, 0, 0.5)",
+    white: "rgba(255, 255, 255, 0.5)"
+};
+
 
 
 function testAlert() {
@@ -33,28 +45,37 @@ function generateBackground() {
 
 }
 
+function getPlanetShadeColor(colorName) {
+    // Default to transparent if color not found
+    const defaultColor = "rgba(0, 0, 0, 0)";
+
+    // Return the corresponding color style or default
+    return colorMap[colorName.toLowerCase()] || defaultColor;
+}
+
 let newImage = new Image();
 newImage.src = "/img/sun-planet.png";
 newImage.sizes = "256px";
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
 //creating new planets from my Planet Class above.
 const planets = [
-    new Planet(6963.4, "Yellow", "Sun", "The Sun is the star at the center of the Solar System."),
-    new Planet(2.4397, "Gray", "Mercury", "Mercury is the smallest planet in our solar system."),
-    new Planet(6.0518, "Yellow", "Venus", "Venus is the second planet from the Sun."),
-    new Planet(6.371, "Blue", "Earth", "Earth is the third planet from the Sun."),
-    new Planet(1.737, "Gray", "Moon", "The Moon is Earth's only natural satellite."),
-    new Planet(3.3895, "Red",  "Mars", "Mars is the fourth planet from the Sun."),
-    new Planet(69.911, "Orange", "Jupiter", "Jupiter is the fifth planet from the Sun."),
-    new Planet(1.821, "Yellow", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter."),
-    new Planet(1.56, "White", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter."),
-    new Planet(2.634, "White", "Ganymede", "Ganymede is the largest moon of Jupiter."),
-    new Planet(2.4, "White", "Callisto", "Callisto is the second-largest moon of Jupiter."),
-    new Planet(58.232, "Yellow", "Saturn", "Saturn is the sixth planet from the Sun."),
-    new Planet(25.362, "Blue", "Uranus", "Uranus is the seventh planet from the Sun."),
-    new Planet(24.622, "Blue", "Neptune", "Neptune is the eighth planet from the Sun."),
-    new Planet(1.1883, "Brown", "Pluto", "Pluto is the ninth planet from the Sun.")
+    new Planet(6963.4, "blue", "Sun", "The Sun is the star at the center of the Solar System."),
+    new Planet(2.4397, "plain", "Mercury", "Mercury is the smallest planet in our solar system."),
+    new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun."),
+    new Planet(6.371, "plain", "Earth", "Earth is the third planet from the Sun."),
+    new Planet(1.737, "plain", "Moon", "The Moon is Earth's only natural satellite."),
+    new Planet(3.3895, "plain",  "Mars", "Mars is the fourth planet from the Sun."),
+    new Planet(69.911, "plain", "Jupiter", "Jupiter is the fifth planet from the Sun."),
+    new Planet(1.821, "plain", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter."),
+    new Planet(1.56, "plain", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter."),
+    new Planet(2.634, "plain", "Ganymede", "Ganymede is the largest moon of Jupiter."),
+    new Planet(2.4, "plain", "Callisto", "Callisto is the second-largest moon of Jupiter."),
+    new Planet(58.232, "plain", "Saturn", "Saturn is the sixth planet from the Sun."),
+    new Planet(25.362, "plain", "Uranus", "Uranus is the seventh planet from the Sun."),
+    new Planet(24.622, "plain", "Neptune", "Neptune is the eighth planet from the Sun."),
+    new Planet(1.1883, "plain", "Pluto", "Pluto is the ninth planet from the Sun.")
 ]
+
 
 // a function with a for loop that dynamically generates planets on the html document
 function generatePlanets(planetsList) {
@@ -64,24 +85,38 @@ function generatePlanets(planetsList) {
     // sets i to be 0 which is the beginning on the array (0 == 1) then it evaluates if i is less than the length of the array,
     // finally it increments i by 1 each time it goes through the loop.
     for (let i = 0; i < planetsList.length; i++) {
+
         // creating the variable "planet" and assigning it to the current planet in the array. 
         var planet = planetsList[i];
+
         // creating the container
         var outerDiv = document.createElement("div");
         outerDiv.className = "space-content";
+
         // creating the planet visual
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
+
+        // Apply shade based on the planet's color, or no style if the color is "plain"
+        if (planet.fog.toLowerCase() != "plain") {
+            var shadeDiv = document.createElement("div");
+            shadeDiv.style.boxShadow = "0 100px 200px 60px " + planet.fog;
+            shadeDiv.style.background = getPlanetShadeColor(planet.fog);
+            planetDiv.appendChild(shadeDiv);
+        } 
+
         // creating the planet title
         var contentTitle = document.createElement("h1");
         contentTitle.className = "space-content-title";
         contentTitle.id = planet.name.toLowerCase() + "Title";
         contentTitle.textContent = planet.name;
+
         // creating the planet description
         var contentDescription = document.createElement("h1");
         contentDescription.className = "space-content-description";
         contentDescription.id = planet.name.toLowerCase() + "Description";
         contentDescription.textContent = planet.description;
+
         // appending the elements to the html document
         outerDiv.appendChild(planetDiv);
         outerDiv.appendChild(contentTitle);
