@@ -19,10 +19,12 @@ body {
 }
 
 #planetSearchBar {
-    position:absolute;
-    z-index: 100;
-    top: 95vh;
-    right: 130vh;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
+    padding: 10px;
 }
 
 /* style for each space item */

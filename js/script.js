@@ -59,7 +59,7 @@ newImage.sizes = "256px";
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
 //creating new planets from my Planet Class above.
 const planets = [
-    new Planet(6963.4, "blue", "Sun", "The Sun is the star at the center of the Solar System."),
+    new Planet(6963.4, "plain", "Sun", "The Sun is the star at the center of the Solar System."),
     new Planet(2.4397, "plain", "Mercury", "Mercury is the smallest planet in our solar system."),
     new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun."),
     new Planet(6.371, "plain", "Earth", "Earth is the third planet from the Sun."),
@@ -70,11 +70,20 @@ const planets = [
     new Planet(1.56, "plain", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter."),
     new Planet(2.634, "plain", "Ganymede", "Ganymede is the largest moon of Jupiter."),
     new Planet(2.4, "plain", "Callisto", "Callisto is the second-largest moon of Jupiter."),
-    new Planet(58.232, "plain", "Saturn", "Saturn is the sixth planet from the Sun."),
+    new Planet(58.232, "orange", "Saturn", "Saturn is the sixth planet from the Sun."),
     new Planet(25.362, "plain", "Uranus", "Uranus is the seventh planet from the Sun."),
-    new Planet(24.622, "plain", "Neptune", "Neptune is the eighth planet from the Sun."),
+    new Planet(24.622, "blue", "Neptune", "Neptune is the eighth planet from the Sun."),
     new Planet(1.1883, "plain", "Pluto", "Pluto is the ninth planet from the Sun.")
 ]
+
+function generatingFog(planetDiv, planet){
+    if (planet.fog.toLowerCase() != "plain") {
+        var shadeDiv = document.createElement("div");
+        shadeDiv.style.boxShadow = "0 100px 200px 60px " + planet.fog;
+        shadeDiv.style.background = getPlanetShadeColor(planet.fog);
+        planetDiv.appendChild(shadeDiv);
+    } 
+}
 
 
 // a function with a for loop that dynamically generates planets on the html document
@@ -97,13 +106,41 @@ function generatePlanets(planetsList) {
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
 
-        // Apply shade based on the planet's color, or no style if the color is "plain"
-        if (planet.fog.toLowerCase() != "plain") {
-            var shadeDiv = document.createElement("div");
-            shadeDiv.style.boxShadow = "0 100px 200px 60px " + planet.fog;
-            shadeDiv.style.background = getPlanetShadeColor(planet.fog);
-            planetDiv.appendChild(shadeDiv);
-        } 
+
+
+        let season = "Winter";
+        let planetDate = new Date().getMonth() + 1;
+
+        if (planetDate <= 4) {
+            season = "Winter";
+        }
+        else if (planetDate < 7) {
+            season = "Spring";
+        }
+        else if (planetDate < 10) {
+            season = "Summer";
+        }
+        else {
+            season = "Fall";
+        }
+
+
+        switch(season) {
+            case "Winter":
+                generatingFog(planetDiv, planet)
+                break;
+            case "Spring":
+                generatingFog(planetDiv, planet)
+                break;
+            case "Summer":
+                generatingFog(planetDiv, planet)
+                break;
+            case "Fall":
+                generatingFog(planetDiv, planet)
+                break;
+            default:
+              // code block
+          } 
 
         // creating the planet title
         var contentTitle = document.createElement("h1");
