@@ -15,3 +15,6 @@ This app is easy to use!
  - Simply _click and drag_ on the screen to move left or right and you'll see the objects show up as you explore.
  - _Click on the objects_ to expose more info about that object and an external link to learn even more if you choose to.
  - As you scroll, you can see the distance you are traveling, as well as fun facts in between the objects.
+ - Search for a planet in the search bar to snap directly to that planet.
+   
+    ![alt text](/img/preview01.png)
