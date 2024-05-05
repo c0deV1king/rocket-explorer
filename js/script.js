@@ -123,7 +123,7 @@ function findPlanet() {
 }
 
 function snapToPlanet(planetObject) {
-    planetObject.scrollIntoView({behavior: "smooth", block: "center"});
+    planetObject.scrollIntoView({behavior: "smooth", block: "center", inline: "center"}); // block is horizontal, inline is vertical
 }
 
 
