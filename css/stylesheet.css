@@ -30,33 +30,31 @@ body {
 /* style for each space item */
 .space-content {
     display: flex;
+    position: relative;
     flex-shrink: 0;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    height: 1000px;
+    align-self: baseline;
+    bottom: 15%;
     width: auto;
     padding-right: 250px;
-    gap: 50px;
 }
 
 .space-content-title {
     font-size: 20px;
     position: relative;
-    top: 120px;
+    padding-top: 5%;
     color: white ;
 }
 .space-content-description {
     font-size: 15px;
     position: relative;
-    top: 140px;
+    top: 10%;
     color: white ;
 }
 
 .progress-bar {
     position: absolute;
-    top: 750px;
-    bottom: 500px;
+    top: 90%;
     width: 50%;
     left: 30%;
 }

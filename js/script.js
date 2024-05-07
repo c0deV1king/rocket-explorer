@@ -100,12 +100,11 @@ function generatePlanets(planetsList) {
 
         // creating the container
         var outerDiv = document.createElement("div");
-        outerDiv.className = "space-content";
+        outerDiv.className = "space-content row";
 
         // creating the planet visual
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
-
 
 
         let season = "Winter";
