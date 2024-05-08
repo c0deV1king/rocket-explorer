@@ -107,10 +107,12 @@ function generatePlanets(planetsList) {
         planetDiv.id = "planet" + planet.name;
 
 
-
+        // declaring season as winter
         let season = "Winter";
+        // creating a date and grabbing the current month, then copnverting the months to the numbers 1-12. (+1 (normally 0-11))
         let planetDate = new Date().getMonth() + 1;
 
+        // if statement to determine the season based on the month
         if (planetDate <= 4) {
             season = "Winter";
         }
@@ -124,7 +126,8 @@ function generatePlanets(planetsList) {
             season = "Fall";
         }
 
-
+        // changing the fog based on the season.
+        // the switch statement basically changes the outcome based on the argument. In this case, its the season that we declared above.
         switch(season) {
             case "Winter":
                 generatingFog(planetDiv, planet)
