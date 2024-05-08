@@ -23,7 +23,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%; 
+    width: 25%; 
     padding: 10px;
 }
 
@@ -201,3 +201,67 @@ body {
     flex-grow: 0;
     flex-shrink: 0;
 }
+
+/* Let us be mobile/tablet friendly! */
+/* Bootstrap breakpoints */
+
+/* Ultrawide Monitors */
+@media (max-width: 2560px) {
+    #planetSearchBar {
+        width: 20%;
+    }
+    .progress-bar {
+        top: 85%;
+    }
+}
+
+/* Normal Monitors */
+@media (max-width: 1920px) {
+    #planetSearchBar {
+        width: 25%;
+    }
+    .progress-bar {
+        top: 85%;
+    }
+}
+
+/* Small Monitors/laptops */
+@media (max-width: 1200px) {
+    #planetSearchBar {
+        width: 30%;
+    }
+    .progress-bar {
+        top: 85%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    #planetSearchBar {
+        width: 40%;
+    }
+    .progress-bar {
+        top: 85%;
+    }
+}
+
+/* Small Tablets/Large Mobiles */
+@media (max-width: 768px) {
+    #planetSearchBar {
+        width: 60%;
+    }
+    .progress-bar {
+        top: 85%;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+    #planetSearchBar {
+        width: 100%;
+    }
+    .progress-bar {
+        top: 85%;
+    }
+}
+
