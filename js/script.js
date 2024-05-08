@@ -197,7 +197,6 @@ function snapToPlanet(planetObject) {
     planetObject.scrollIntoView({behavior: "smooth", block: "center", inline: "center"}); // block is horizontal, inline is vertical
 }
 
-
     
 // click and drag scrolling
 // document(points towards the html document)
@@ -244,21 +243,52 @@ clickAndDragScroll.addEventListener("mousemove", function(e) {
     clickAndDragScroll.scrollLeft = scrollLeft - scroll;
 });
 
+// Touch Screen Support yay!
+// Basically a copy and paste from the click and drag scrolling but with touch events instead of mouse events.
+const webAppTouch = document.getElementById("webapp-main");
+
+let touchStart = false;
+let touchX;
+let touchScroll;
+
+webAppTouch.addEventListener("touchstart", e => {
+    console.log("Touch Start");
+    touchStart = true;
+    // e.touches[0] is taking the first touchpoint (finger) on the screen and getting the x position of it.
+    touchX = e.touches[0].pageX - webAppTouch.offsetLeft;
+    touchScroll = webAppTouch.scrollLeft;
+});
+
+webAppTouch.addEventListener("touchmove", e => {
+    if (!touchStart) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - webAppTouch.offsetLeft;
+    const scroll = x - touchX;
+    webAppTouch.scrollLeft = touchScroll - scroll;
+});
+
+document.addEventListener("touchend", e => {
+    console.log("Touch End");
+    touchStart = false;
+});
+
 // Progress bar
 // declaring variables and assigning doc elements
-var webappWidth = document.documentElement.scrollWidth;
-var scrollBar = document.querySelector(".webapp-main");
-var barElement = document.querySelector(".bar");
+var webappWidth = document.documentElement.clientWidth;
+var scrollBar = document.getElementById("webapp-main");
+var barElement = document.getElementById("bar");
 // onscroll event to find the scroll position and applying it to some css to animate the progress bar
     if (scrollBar) {
         scrollBar.onscroll = function() {
             console.log("Hor Scroll Position:", scrollBar.scrollLeft);
-
-            var percentageScrolled = (scrollBar.scrollLeft / webappWidth) * 13.4163;
-
+                // calculating the percentage of the scroll position
+                // still trying to wrap my head around this math and why it works.
+            let percentageScrolled = (scrollBar.scrollLeft / (scrollBar.scrollWidth - webappWidth)) * 100;
+            console.log("Percentage Scrolled:", percentageScrolled);
             barElement.style.width = percentageScrolled + "%";
         }
     };
+    
 
 generatePlanets(planets);
 });
