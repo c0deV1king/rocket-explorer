@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     /* white-space: pre-wrap; */
-    background: url('https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002039/GSFC_20171208_Archive_e002039~medium.jpg') repeat-x;
+    background: url(/img/webapp-background-v2.png);
     height: 100vh;
     width: 100vh;
     text-align: center;
