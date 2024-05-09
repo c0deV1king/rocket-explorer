@@ -15,8 +15,36 @@ body {
     height: 100vh;
     width: 100vh;
     text-align: center;
-    padding-left: 50%;
+    padding-left: 35%;
 }
+
+#welcome-banner {
+    /* padding-right: 10%; */
+    margin-right: 500px;
+    color: white;
+    text-align: center;
+    height: 300px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 400;
+}
+
+#title {
+    width: 500px;
+    font-size: 50px;
+}
+
+#arrow-right {
+    width: 32px;
+    height: 32px;
+}
+
+#scroll-instructions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ec4926;
+}
+
 
 #planetSearchBar {
     position: fixed;
@@ -243,6 +271,9 @@ body {
     .progress-bar {
         top: 85%;
     }
+    #webapp-main {
+        padding-left: 18%;
+    }
 }
 
 /* Small Tablets/Large Mobiles */
@@ -253,6 +284,13 @@ body {
     .progress-bar {
         top: 85%;
     }
+    #webapp-main {
+        padding-left: 16%;
+    }
+    #title {
+        text-align: center;
+        font-size: 50px;
+    }
 }
 
 /* Mobiles */
@@ -262,6 +300,20 @@ body {
     }
     .progress-bar {
         top: 85%;
+    }
+    #webapp-main {
+        padding-left: 12%;
+    }
+    #welcome-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    #title {
+        font-size: 30px;
+        width: 250px;
     }
 }
 

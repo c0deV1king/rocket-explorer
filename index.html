@@ -14,11 +14,26 @@
 
     <!-- linking favicon -->
     <link rel="icon" href="/img/website-test-icon.png" type="image/x-icon">
+
+    <!-- linking google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+    </style>
 </head>
 <body id="mainPage">
 
- 
     <div class="webapp-main w-100" id="webapp-main">
+
+        <div class="container" id="welcome-banner">
+            <p id="title">Rocket Explorer</p>
+            <p>Made with <span style="color: #ec4926;">love</span> by c0dev1king</p>
+
+            <div class="row row-cols-2" id="scroll-instructions">
+                <p class="col w-75 pt-2" id="instruction-text">Click & drag or swipe to start exploring</p>
+                <img class="col gx-0" src="/img/triple-arrow-right.png" alt="arrow-right" id="arrow-right">
+            </div>
+        </div>
+
         <div class="progress-bar" id="progress-bar">
             <div class="bar" id="bar"></div>
         </div>
