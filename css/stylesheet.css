@@ -46,10 +46,30 @@ body {
     color: #ec4926;
 }
 
+#quick-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 95%;
+    right: 20%;
+}
+
+#searchIcon {
+    width: 32px;
+    height: 32px;
+}
+
+#searchIcon:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 
 #planetSearchBar {
+    visibility: hidden;
     position: fixed;
-    bottom: 0;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     width: 25%; 

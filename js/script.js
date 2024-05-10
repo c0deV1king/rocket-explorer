@@ -162,6 +162,23 @@ function generatePlanets(planetsList) {
     // calling the addEventListeners function to add event listeners to the planets
     addEventListeners(planetsList);
 }
+
+// creating a quick menu for a simplified look at the bottom of the screen
+function searchForPlanet() {
+    searchBar = document.getElementById("planetSearchBar");
+    searchBar.style.visibility = "hidden";
+    searchIcon = document.getElementById("searchIcon");
+
+    searchIcon.addEventListener("click", (event) => {
+        if (searchBar.style.visibility === "hidden") {
+            console.log("Showing search bar...")
+            searchBar.style.visibility = "visible";
+    }
+        else {
+            console.log("Hiding search bar...")
+            searchBar.style.visibility = "hidden";
+    }});
+}
 // create a function to add event listeners to the planets, simular to above, it goes through the array one by one.
 function addEventListeners(planetsList) {
     for (let i = 0; i < planetsList.length; i++) {
@@ -291,6 +308,7 @@ var barElement = document.getElementById("bar");
     
 
 generatePlanets(planets);
+searchForPlanet();
 });
 
 // add a function to stop the user from highlighting text when they click and drag.
