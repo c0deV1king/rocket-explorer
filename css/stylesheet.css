@@ -16,6 +16,7 @@ body {
     width: 100vh;
     text-align: center;
     padding-left: 35%;
+    font-family: "Pixelify Sans", sans-serif;
 }
 
 #welcome-banner {
@@ -228,6 +229,14 @@ body {
     background-image: url(/img/dwarf-planet-general.png);
     flex-grow: 0;
     flex-shrink: 0;
+}
+
+/* selects all id's with the prefix "planet" */
+/* also applies the pseudo class hover */
+[id^="planet"]:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.5s;
 }
 
 /* Let us be mobile/tablet friendly! */
