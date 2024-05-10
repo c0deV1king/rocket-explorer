@@ -180,7 +180,7 @@ function planetClickDetails(planetDiv, planet) {
 }
 
 function findPlanet() {
-    let input = document.getElementById("planetSearch").value;
+    let input = document.getElementById("searchInput").value;
     
     // lambda function
     let planet = planets.find(plan => plan.name.toLowerCase() === input.trim().toLowerCase());

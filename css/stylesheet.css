@@ -95,6 +95,20 @@ body {
     background-color: #f1f1f1;
 }
 
+/* styling search bar to look better */
+#searchInput {
+    background-color: #ec4926;
+    opacity: 0.5;
+}
+
+/* focus pseudo class, it applies when clicked on */
+#searchInput:focus {
+    outline: none;
+    background-color: white;
+    transition: 0.5s;
+    opacity: 1;
+}
+
 /* planet base styles */
 #planetSun {
     width: 256px;
