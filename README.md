@@ -17,4 +17,4 @@ This app is easy to use!
  - As you scroll, you can see the distance you are traveling, as well as fun facts in between the objects.
  - Search for a planet in the search bar to snap directly to that planet.
    
-    ![alt text](/img/preview01.png)
+    ![alt text](/img/search-preview-still.png)
