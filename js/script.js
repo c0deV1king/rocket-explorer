@@ -198,15 +198,18 @@ function planetClickDetails(planetDiv, planet) {
 
 function findPlanet() {
     let input = document.getElementById("searchInput").value;
+    let searchBar = document.getElementById("planetSearchBar");
     
     // lambda function
     let planet = planets.find(plan => plan.name.toLowerCase() === input.trim().toLowerCase());
     if (planet) {
         console.log(`We found the planet ${planet.name}`);
         snapToPlanet(document.getElementById("planet" + planet.name));
+        searchBar.style.visibility = "hidden";
     }
     else {
         console.log("We couldn't find the planet");
+        searchBar.style.visibility = "hidden";
     }
 }
 

@@ -13,7 +13,7 @@ body {
     /* white-space: pre-wrap; */
     background: url(/img/webapp-background-v2.png);
     height: 100vh;
-    width: 100vh;
+    /* width: 100%; */
     text-align: center;
     padding-left: 35%;
     font-family: "Pixelify Sans", sans-serif;
@@ -48,11 +48,12 @@ body {
 
 #quick-menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    width: 100%;
     position: fixed;
-    top: 95%;
-    right: 20%;
+    z-index: 2;
+    bottom: 0;
+    padding: 10px;
 }
 
 #searchIcon {
@@ -67,13 +68,16 @@ body {
 
 
 #planetSearchBar {
+    display: flex;
+    justify-content: flex-start;
     visibility: hidden;
     position: fixed;
     bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 25%; 
     padding: 10px;
+    left: 0;
+    right: 0;
+    margin-left: 50px;
 }
 
 /* style for each space item */
