@@ -80,6 +80,10 @@ body {
     margin-left: 50px;
 }
 
+#distance-travelled {
+    color: #f1f1f1;
+}
+
 /* style for each space item */
 .space-content {
     display: flex;

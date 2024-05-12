@@ -217,6 +217,22 @@ function snapToPlanet(planetObject) {
     planetObject.scrollIntoView({behavior: "smooth", block: "center", inline: "center"}); // block is horizontal, inline is vertical
 }
 
+// show and update text based on the kilometers we have travelled in space relative to the pixels we have scrolled
+// 1 pixel = 54437 km
+// 2682px = distance from the sun to the earth
+// the sun is 146.6 million km away from the earth
+function updateDistanceTravelled() {
+    let distanceTravelled = document.getElementById("distance-travelled");
+    let webappMain = document.getElementById("webapp-main");
+
+    webappMain.addEventListener("scroll", function() {
+    let distance = document.getElementById("webapp-main").scrollLeft;
+    let distanceInKm = distance * 54437; // calculated based the the distance between the sun and the earth
+    distanceTravelled.textContent = "Distance Travelled: " + distanceInKm + " km";
+})};
+
+
+
     
 // click and drag scrolling
 // document(points towards the html document)
@@ -302,16 +318,15 @@ var barElement = document.getElementById("bar");
         scrollBar.onscroll = function() {
             console.log("Hor Scroll Position:", scrollBar.scrollLeft);
                 // calculating the percentage of the scroll position
-                // still trying to wrap my head around this math and why it works.
             let percentageScrolled = (scrollBar.scrollLeft / (scrollBar.scrollWidth - webappWidth)) * 100;
             console.log("Percentage Scrolled:", percentageScrolled);
             barElement.style.width = percentageScrolled + "%";
         }
     };
     
-
 generatePlanets(planets);
 searchForPlanet();
+updateDistanceTravelled();
 });
 
 // add a function to stop the user from highlighting text when they click and drag.
