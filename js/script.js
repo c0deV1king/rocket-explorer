@@ -229,6 +229,11 @@ function updateDistanceTravelled() {
     let distance = document.getElementById("webapp-main").scrollLeft;
     let distanceInKm = distance * 54437; // calculated based the the distance between the sun and the earth
     distanceTravelled.textContent = "Distance Travelled: " + distanceInKm + " km";
+    //styling
+    distanceTravelled.style.color = "#ec4926";
+    distanceTravelled.style.textShadow = "2px 2px 3px #000000";
+    distanceTravelled.style.fontFamily = "Reddit Sans, sans-serif";
+    distanceTravelled.style.fontSize = "14px";
 })};
 
 
