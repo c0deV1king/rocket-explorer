@@ -192,11 +192,74 @@ body {
     flex-shrink: 0;
 }
 
+#planetPhobos {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/rocky-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetDeimos {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/rocky-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetCeres {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: url(/img/dwarf-planet-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
 #planetJupiter {
     width: 256px;
     height: 256px;
     border-radius: 50%;
     background-image: url(/img/gas-planet-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetMetis {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/rocky-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetAdrastea {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/rocky-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetAmalthea {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/rocky-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetThebe {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/rocky-moon-general.png);
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -240,8 +303,80 @@ body {
 #planetSaturn {
     width: 512px;
     height: 512px;
-    border-radius: 50%;
     background-image: url(/img/saturn-planet.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+    
+}
+
+#planetMimas {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/rocky-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetEnceladus {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetTethys {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetDione {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetRhea {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetTitan {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetHyperion {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetIapetus {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -265,6 +400,77 @@ body {
 }
 
 #planetPluto {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: url(/img/dwarf-planet-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetCharon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetStyx {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetNix {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetKerberos {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetHydra {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: url(/img/ice-moon-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetHaumea {
+    width: 128px;
+    height: 128px;
+    background-image: url(/img/haumea-planet.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetMakemake {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: url(/img/dwarf-planet-general.png);
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#planetEris {
     width: 128px;
     height: 128px;
     border-radius: 50%;
