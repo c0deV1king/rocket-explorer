@@ -87,10 +87,11 @@ body {
 /* style for each space item */
 .space-content {
     display: flex;
+    flex: auto;
     position: relative;
     flex-shrink: 0;
     justify-content: center;
-    align-self: baseline;
+    align-self:flex-end;
     bottom: 15%;
     width: auto;
     padding-right: 250px;

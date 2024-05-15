@@ -3,12 +3,25 @@
 // use url: link + NasaKey
 
 //created a class for planets to build objects for each planet.
+
+// nasa API image of the planet
+// astronomacal unit "AU" from the sun
+// Year length in Earth years
+// space missions if any
+// link to nasa page on the planet/object
+
 class Planet {
-    constructor(radius, fog, name, description) {
+    constructor(radius, fog, name, description, image, au, yearLength, missions, link) {
       this.radius = radius;
       this.fog = fog;
       this.name = name;
       this.description = description;
+      //multiple parameters for various details???
+      this.image = image;
+      this.au = au;
+      this.yearLength = yearLength;
+      this.missions = missions;
+      this.link = link;
     }
   }
 
@@ -53,16 +66,26 @@ function getPlanetShadeColor(colorName) {
     return colorMap[colorName.toLowerCase()] || defaultColor;
 }
 
-let newImage = new Image();
-newImage.src = "/img/sun-planet.png";
-newImage.sizes = "256px";
+
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
 //creating new planets from my Planet Class above.
 const planets = [
     new Planet(6963.4, "plain", "Sun", "The Sun is the star at the center of the Solar System."),
+
     new Planet(2.4397, "plain", "Mercury", "Mercury is the smallest planet in our solar system."),
+
     new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun."),
-    new Planet(6.371, "plain", "Earth", "Earth is the third planet from the Sun."),
+
+    new Planet(6.371, 
+    "plain", 
+    "Earth",
+    "Earth is the third planet from the Sun.", 
+    "Testing planet details...",
+    "1 AU",
+    "1 Earth Year",
+    "N/A",
+    "#"),
+
     new Planet(1.737, "plain", "Moon", "The Moon is Earth's only natural satellite."),
     new Planet(3.3895, "plain",  "Mars", "Mars is the fourth planet from the Sun."),
     new Planet(0.532, "plain", "Phobos", "Phobos is the larger and closer of the two natural satellites of Mars."),
@@ -124,6 +147,7 @@ function generatePlanets(planetsList) {
         // creating the container
         var outerDiv = document.createElement("div");
         outerDiv.className = "space-content row";
+        outerDiv.id = "space-content";
 
         // creating the planet visual
         var planetDiv = document.createElement("div");
@@ -176,7 +200,20 @@ function generatePlanets(planetsList) {
         contentDescription.id = planet.name.toLowerCase() + "Description";
         contentDescription.textContent = planet.description;
 
+        // create the more info planet popup
+        let planetDetails = document.createElement("div");
+        planetDetails.className = "planet-details-popup";
+        planetDetails.id = planet.name.toLowerCase() + "Details";
+        planetDetails.style.color = "white";
+        // generates the content for the planet details
+        planetDetails.innerHTML = "<p>" + planet.image + "</p>" + "<p>" + planet.au + "</p>" + "<p>" + planet.yearLength + "</p>" + "<p>" + planet.missions + "</p>" + "<a href=" + planet.link + ">More Info</a>";
+        planetDetails.style.backgroundColor = "grey";
+        planetDetails.style.borderRadius = "10px";
+        planetDetails.style.marginBottom = "5%";
+        planetDetails.style.height = "200px";
+
         // appending the elements to the html document
+        outerDiv.appendChild(planetDetails);
         outerDiv.appendChild(planetDiv);
         outerDiv.appendChild(contentTitle);
         outerDiv.appendChild(contentDescription);
@@ -214,8 +251,20 @@ function addEventListeners(planetsList) {
 // a function that has an onclick event to apply to the planets
 // console log for debugging/testing
 function planetClickDetails(planetDiv, planet) {
+    let detailBox = document.getElementById(planet.name.toLowerCase() + "Details");
+
+    detailBox.style.visibility = "hidden";
+
     planetDiv.addEventListener("click", (event) => {
-        console.log("planet clicked:", planet.name);
+        if (detailBox.style.visibility === "hidden") {
+            detailBox.style.visibility = "visible";
+            console.log("planet clicked:", planet.name + " Showing details...");
+            
+    }
+        else {
+            detailBox.style.visibility = "hidden";
+            console.log("planet clicked:", planet.name + " Hiding details...");
+        }
     });
 }
 
