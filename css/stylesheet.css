@@ -92,8 +92,9 @@ body {
     flex-shrink: 0;
     justify-content: center;
     align-self:flex-end;
-    bottom: 15%;
-    width: auto;
+    align-items: center;
+    width: 50%;
+    bottom: 30%;
     padding-right: 250px;
 }
 

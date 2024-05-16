@@ -80,7 +80,7 @@ const planets = [
     "plain", 
     "Earth",
     "Earth is the third planet from the Sun.", 
-    "Testing planet details...",
+    "<img src='https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg' width='100%' height='100%' ></img>",
     "1 AU",
     "1 Earth Year",
     "N/A",
@@ -146,12 +146,14 @@ function generatePlanets(planetsList) {
 
         // creating the container
         var outerDiv = document.createElement("div");
-        outerDiv.className = "space-content row";
+        outerDiv.className = "space-content";
         outerDiv.id = "space-content";
+        outerDiv.style.flexDirection = "column";
 
         // creating the planet visual
         var planetDiv = document.createElement("div");
         planetDiv.id = "planet" + planet.name;
+        
 
 
         let season = "Winter";
@@ -208,15 +210,18 @@ function generatePlanets(planetsList) {
         // generates the content for the planet details
         planetDetails.innerHTML = "<p>" + planet.image + "</p>" + "<p>" + planet.au + "</p>" + "<p>" + planet.yearLength + "</p>" + "<p>" + planet.missions + "</p>" + "<a href=" + planet.link + ">More Info</a>";
         planetDetails.style.backgroundColor = "grey";
+        planetDetails.style.flexDirection = "column";
+        planetDetails.style.width = "50%";
         planetDetails.style.borderRadius = "10px";
         planetDetails.style.marginBottom = "5%";
-        planetDetails.style.height = "200px";
+        planetDetails.style.padding = "5%";
 
         // appending the elements to the html document
-        outerDiv.appendChild(planetDetails);
+        
         outerDiv.appendChild(planetDiv);
         outerDiv.appendChild(contentTitle);
         outerDiv.appendChild(contentDescription);
+        outerDiv.appendChild(planetDetails);
         webappMain.appendChild(outerDiv);
     }
     // calling the addEventListeners function to add event listeners to the planets
@@ -253,16 +258,16 @@ function addEventListeners(planetsList) {
 function planetClickDetails(planetDiv, planet) {
     let detailBox = document.getElementById(planet.name.toLowerCase() + "Details");
 
-    detailBox.style.visibility = "hidden";
+    detailBox.style.display = "none";
 
     planetDiv.addEventListener("click", (event) => {
-        if (detailBox.style.visibility === "hidden") {
-            detailBox.style.visibility = "visible";
-            console.log("planet clicked:", planet.name + " Showing details...");
             
+        if (detailBox.style.display === "none") {
+            detailBox.style.display = "flex";
+            console.log("planet clicked:", planet.name + " Showing details...");
     }
         else {
-            detailBox.style.visibility = "hidden";
+            detailBox.style.display = "none";
             console.log("planet clicked:", planet.name + " Hiding details...");
         }
     });
