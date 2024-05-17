@@ -70,17 +70,17 @@ function getPlanetShadeColor(colorName) {
 //created a function for each planet. I am sure there is a better way of doing this but this is what I have for now.
 //creating new planets from my Planet Class above.
 const planets = [
-    new Planet(6963.4, "plain", "Sun", "The Sun is the star at the center of the Solar System."),
+    new Planet(6963.4, "plain", "Sun", "The Sun is the star at the center of the Solar System.", "<img src='https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001435/GSFC_20171208_Archive_e001435~medium.jpg' width='200px' height='200px'></img>", "This is the sun, our home star and it's what we will be using to determine each objects distance.", "The sun doesn't have a 'year'", "Explorer-10, Parker Solar Probe, SDO & more", "https://science.nasa.gov/sun/facts/"),
 
-    new Planet(2.4397, "plain", "Mercury", "Mercury is the smallest planet in our solar system."),
+    new Planet(2.4397, "plain", "Mercury", "Mercury is the smallest planet in our solar system.", "<img src='https://images-assets.nasa.gov/image/PIA11245/PIA11245~orig.jpg' width='200px' height='200px'></img>", "0.4 AU from the Sun", "88 Days", "Mariner 10, MESSENGER, BepiColombo.", "https://science.nasa.gov/mercury/facts/"),
 
-    new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun."),
+    new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA00271/PIA00271~orig.jpg' width='200px' height='200px'></img>", "0.72 AU from the Sun", "225 Days", "Mariner 2, Venera 7, Akatsuki & more.", "https://science.nasa.gov/venus/venus-facts/"),
 
-    new Planet(6.371, "plain", "Earth","Earth is the third planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg' width='200px' height='200px'></img>","1 AU","1 Earth Year","N/A","#"),
+    new Planet(6.371, "plain", "Earth","Earth is the third planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg' width='200px' height='200px'></img>","1 AU","1 Earth Year","N/A","https://science.nasa.gov/earth/facts/"),
 
-    new Planet(1.737, "plain", "Moon", "The Moon is Earth's only natural satellite."),
+    new Planet(1.737, "plain", "Moon", "The Moon is Earth's only natural satellite.", "<img src='https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001939/GSFC_20171208_Archive_e001939~orig.jpg' width='200px' height='200px'></img>", "1 AU (Moon of Earth)", "354 Days", "Apollo 11, Lunokhod 2, Ranger 7 & more.", "https://science.nasa.gov/moon/"),
 
-    new Planet(3.3895, "plain",  "Mars", "Mars is the fourth planet from the Sun."),
+    new Planet(3.3895, "plain",  "Mars", "Mars is the fourth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA03675/PIA03675~orig.jpg' width='200px' height='200px'></img>", "1.5 AU", "687 Days", "Viking 1, Pathfinder, Perseverance / Ingenuity & more.", "https://science.nasa.gov/mars/facts/"),
 
     new Planet(0.532, "plain", "Phobos", "Phobos is the larger and closer of the two natural satellites of Mars."),
 
