@@ -95,7 +95,7 @@ body {
     align-items: center;
     width: 50%;
     bottom: 30%;
-    padding-right: 250px;
+    margin-right: 300px;
 }
 
 .space-content-title {
@@ -137,6 +137,10 @@ body {
     background-color: white;
     transition: 0.5s;
     opacity: 1;
+}
+
+.planet-details-popup {
+    background-image: url(/img/details-panel.png);
 }
 
 /* planet base styles */

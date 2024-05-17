@@ -76,49 +76,74 @@ const planets = [
 
     new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun."),
 
-    new Planet(6.371, 
-    "plain", 
-    "Earth",
-    "Earth is the third planet from the Sun.", 
-    "<img src='https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg' width='100%' height='100%' ></img>",
-    "1 AU",
-    "1 Earth Year",
-    "N/A",
-    "#"),
+    new Planet(6.371, "plain", "Earth","Earth is the third planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg' width='200px' height='200px'></img>","1 AU","1 Earth Year","N/A","#"),
 
     new Planet(1.737, "plain", "Moon", "The Moon is Earth's only natural satellite."),
+
     new Planet(3.3895, "plain",  "Mars", "Mars is the fourth planet from the Sun."),
+
     new Planet(0.532, "plain", "Phobos", "Phobos is the larger and closer of the two natural satellites of Mars."),
+
     new Planet(0.279, "plain", "Deimos", "Deimos is the smaller and more distant of the two natural satellites of Mars."),
+
     new Planet(0, "plain", "Ceres", "Ceres is the largest object in the asteroid belt between Mars and Jupiter."),
+
     new Planet(69.911, "plain", "Jupiter", "Jupiter is the fifth planet from the Sun."),
+
     new Planet(0, "plain", "Metis", "Metis is the innermost moon of Jupiter."),
+
     new Planet(0, "plain", "Adrastea", "Adrastea is the second moon of Jupiter."),
+
     new Planet(0, "plain", "Amalthea", "Amalthea is the third moon of Jupiter."),
+
     new Planet(0, "plain", "Thebe", "Thebe is the fourth moon of Jupiter."),
+
     new Planet(1.821, "plain", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter."),
-    new Planet(1.56, "plain", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter."),
+
+    new Planet(1.56, "white", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter."),
+
     new Planet(2.634, "plain", "Ganymede", "Ganymede is the largest moon of Jupiter."),
+
     new Planet(2.4, "plain", "Callisto", "Callisto is the second-largest moon of Jupiter."),
+
     new Planet(58.232, "orange", "Saturn", "Saturn is the sixth planet from the Sun."),
+
     new Planet(0, "plain", "Mimas", "Mimas is a moon of Saturn."),
+
     new Planet(0, "plain", "Enceladus", "Enceladus is a moon of Saturn."),
+
     new Planet(0, "plain", "Tethys", "Tethys is a moon of Saturn."),
+
     new Planet(0, "plain", "Dione", "Dione is a moon of Saturn."),
+
     new Planet(0, "plain", "Rhea", "Rhea is a moon of Saturn."),
+
     new Planet(0, "plain", "Titan", "Titan is a moon of Saturn."),
+
     new Planet(0, "plain", "Hyperion", "Hyperion is a moon of Saturn."),
+
     new Planet(0, "plain", "Iapetus", "Iapetus is a moon of Saturn."),
+
     new Planet(25.362, "plain", "Uranus", "Uranus is the seventh planet from the Sun."),
+
     new Planet(24.622, "blue", "Neptune", "Neptune is the eighth planet from the Sun."),
+
     new Planet(1.1883, "plain", "Pluto", "Pluto is the ninth planet from the Sun."),
+
     new Planet(0, "plain", "Charon", "Charon is the largest of the five known natural satellites of the dwarf planet Pluto."),
+
     new Planet(0, "plain", "Styx", "Styx is a moon of Pluto."),
+
     new Planet(0, "plain", "Nix", "Nix is a moon of Pluto."),
+
     new Planet(0, "plain", "Kerberos", "Kerberos is a moon of Pluto."),
+
     new Planet(0, "plain", "Hydra", "Hydra is a moon of Pluto."),
+
     new Planet(0, "plain", "Haumea", "Haumea is a dwarf planet located beyond Neptune's orbit."),
+
     new Planet(0, "plain", "Makemake", "Makemake is a dwarf planet and perhaps the second largest Kuiper belt object."),
+    
     new Planet(0, "plain", "Eris", "Eris is a dwarf planet in the scattered disc, a region beyond the Kuiper belt.")
 ]
 
@@ -209,12 +234,13 @@ function generatePlanets(planetsList) {
         planetDetails.style.color = "white";
         // generates the content for the planet details
         planetDetails.innerHTML = "<p>" + planet.image + "</p>" + "<p>" + planet.au + "</p>" + "<p>" + planet.yearLength + "</p>" + "<p>" + planet.missions + "</p>" + "<a href=" + planet.link + ">More Info</a>";
-        planetDetails.style.backgroundColor = "grey";
         planetDetails.style.flexDirection = "column";
-        planetDetails.style.width = "50%";
+        planetDetails.style.width = "250px";
+        planetDetails.style.height = "500px";
         planetDetails.style.borderRadius = "10px";
         planetDetails.style.marginBottom = "5%";
-        planetDetails.style.padding = "5%";
+        planetDetails.style.paddingTop = "25px";
+        planetDetails.style.flexShrink = "0";
 
         // appending the elements to the html document
         
