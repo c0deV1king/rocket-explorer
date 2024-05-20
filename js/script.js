@@ -72,57 +72,57 @@ function getPlanetShadeColor(colorName) {
 const planets = [
     new Planet(6963.4, "plain", "Sun", "The Sun is the star at the center of the Solar System.", "<img src='https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001435/GSFC_20171208_Archive_e001435~medium.jpg' width='200px' height='200px'></img>", "This is the sun, our home star and it's what we will be using to determine each objects distance.", "The sun doesn't have a 'year'", "Explorer-10, Parker Solar Probe, SDO & more", "https://science.nasa.gov/sun/facts/"),
 
-    new Planet(2.4397, "plain", "Mercury", "Mercury is the smallest planet in our solar system.", "<img src='https://images-assets.nasa.gov/image/PIA11245/PIA11245~orig.jpg' width='200px' height='200px'></img>", "0.4 AU from the Sun", "88 Days", "Mariner 10, MESSENGER, BepiColombo.", "https://science.nasa.gov/mercury/facts/"),
+    new Planet(2.4397, "plain", "Mercury", "Mercury is the smallest planet in our solar system.", "<img src='https://images-assets.nasa.gov/image/PIA11245/PIA11245~orig.jpg' width='200px' height='200px'></img>", "0.4 AU from the Sun", "88 Days in a year", "Mariner 10, MESSENGER, BepiColombo.", "https://science.nasa.gov/mercury/facts/"),
 
-    new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA00271/PIA00271~orig.jpg' width='200px' height='200px'></img>", "0.72 AU from the Sun", "225 Days", "Mariner 2, Venera 7, Akatsuki & more.", "https://science.nasa.gov/venus/venus-facts/"),
+    new Planet(6.0518, "plain", "Venus", "Venus is the second planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA00271/PIA00271~orig.jpg' width='200px' height='200px'></img>", "0.72 AU from the Sun", "225 Days in a year", "Mariner 2, Venera 7, Akatsuki & more.", "https://science.nasa.gov/venus/venus-facts/"),
 
-    new Planet(6.371, "plain", "Earth","Earth is the third planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg' width='200px' height='200px'></img>","1 AU","1 Earth Year","N/A","https://science.nasa.gov/earth/facts/"),
+    new Planet(6.371, "plain", "Earth","Earth is the third planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg' width='200px' height='200px'></img>","1 AU from the Sun","1 Earth Year","N/A","https://science.nasa.gov/earth/facts/"),
 
-    new Planet(1.737, "plain", "Moon", "The Moon is Earth's only natural satellite.", "<img src='https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001939/GSFC_20171208_Archive_e001939~orig.jpg' width='200px' height='200px'></img>", "1 AU (Moon of Earth)", "354 Days", "Apollo 11, Lunokhod 2, Ranger 7 & more.", "https://science.nasa.gov/moon/"),
+    new Planet(1.737, "plain", "Moon", "The Moon is Earth's only natural satellite.", "<img src='https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001939/GSFC_20171208_Archive_e001939~orig.jpg' width='200px' height='200px'></img>", "1 AU (Moon of Earth)", "354 Days in a year", "Apollo 11, Lunokhod 2, Ranger 7 & more.", "https://science.nasa.gov/moon/"),
 
-    new Planet(3.3895, "plain",  "Mars", "Mars is the fourth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA03675/PIA03675~orig.jpg' width='200px' height='200px'></img>", "1.5 AU", "687 Days", "Viking 1, Pathfinder, Perseverance / Ingenuity & more.", "https://science.nasa.gov/mars/facts/"),
+    new Planet(3.3895, "plain",  "Mars", "Mars is the fourth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA03675/PIA03675~orig.jpg' width='200px' height='200px'></img>", "1.5 AU from the Sun", "687 Days in a year", "Viking 1, Pathfinder, Perseverance / Ingenuity & more.", "https://science.nasa.gov/mars/facts/"),
 
-    new Planet(0.532, "plain", "Phobos", "Phobos is the larger and closer of the two natural satellites of Mars."),
+    new Planet(0.532, "plain", "Phobos", "Phobos is the larger and closer of the two natural satellites of Mars.", "<img src='https://images-assets.nasa.gov/image/PIA10369/PIA10369~orig.jpg' width='200px' height='200px'></img>", "1.5 AU (Moon of Mars)", "N/A", "Phobos 2, Mars Express,  Mars Reconnaissance Orbiter & more.", "https://science.nasa.gov/mars/moons/phobos/"),
 
-    new Planet(0.279, "plain", "Deimos", "Deimos is the smaller and more distant of the two natural satellites of Mars."),
+    new Planet(0.279, "plain", "Deimos", "Deimos is the smaller and more distant of the two natural satellites of Mars.", "<img src='https://images-assets.nasa.gov/image/PIA08667/PIA08667~orig.jpg' width='200px' height='200px'></img>", "1.5 AU (Moon of Mars)", "N/A", "Same as Phobos", "https://science.nasa.gov/mars/moons/deimos/"),
 
-    new Planet(0, "plain", "Ceres", "Ceres is the largest object in the asteroid belt between Mars and Jupiter."),
+    new Planet(0, "plain", "Ceres", "Ceres is the largest object in the asteroid belt between Mars and Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA21079/PIA21079~orig.jpg' width='200px' height='200px'></img>", "2.8 AU from the Sun", "1682 Days in a year", "Dawn", "https://science.nasa.gov/dwarf-planets/ceres/facts/"),
 
-    new Planet(69.911, "plain", "Jupiter", "Jupiter is the fifth planet from the Sun."),
+    new Planet(69.911, "plain", "Jupiter", "Jupiter is the fifth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA00343/PIA00343~orig.jpg' width='200px' height='200px'></img>", "5.2 AU from the Sun", "4333 Days in a year", "Pioneer 10, Juno, Galileo & more.", "https://science.nasa.gov/jupiter/jupiter-facts/"),
 
-    new Planet(0, "plain", "Metis", "Metis is the innermost moon of Jupiter."),
+    new Planet(0, "plain", "Metis", "Metis is the innermost moon of Jupiter.", "<img src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Metis.jpg' width='200px height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "N/A", "https://science.nasa.gov/jupiter/moons/metis/"),
 
-    new Planet(0, "plain", "Adrastea", "Adrastea is the second moon of Jupiter."),
+    new Planet(0, "plain", "Adrastea", "Adrastea is the second moon of Jupiter.", "<img src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Adrastea.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "N/A", "https://science.nasa.gov/jupiter/moons/adrastea/"),
 
-    new Planet(0, "plain", "Amalthea", "Amalthea is the third moon of Jupiter."),
+    new Planet(0, "plain", "Amalthea", "Amalthea is the third moon of Jupiter.", "<img src='https://photojournal.jpl.nasa.gov/jpegMod/PIA01072_modest.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "N/A", "https://science.nasa.gov/jupiter/moons/amalthea/"),
 
-    new Planet(0, "plain", "Thebe", "Thebe is the fourth moon of Jupiter."),
+    new Planet(0, "plain", "Thebe", "Thebe is the fourth moon of Jupiter.", "<img src='https://upload.wikimedia.org/wikipedia/commons/1/1b/Thebe.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "N/A", "https://science.nasa.gov/jupiter/moons/thebe/"),
 
-    new Planet(1.821, "plain", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter."),
+    new Planet(1.821, "plain", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA00738/PIA00738~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Pioneer 10 & 11, Voyager 1 & 2 & more.", "https://science.nasa.gov/jupiter/moons/io/facts/"),
 
-    new Planet(1.56, "white", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter."),
+    new Planet(1.56, "white", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA25695/PIA25695~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Pioneer 10 & 11, Juno, Europa Clipper & more.", "https://science.nasa.gov/jupiter/moons/europa/facts/"),
 
-    new Planet(2.634, "plain", "Ganymede", "Ganymede is the largest moon of Jupiter."),
+    new Planet(2.634, "plain", "Ganymede", "Ganymede is the largest moon of Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA24681/PIA24681~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Pioneer 11, Voyager 1 & 2, Galileo.", "https://science.nasa.gov/jupiter/moons/ganymede/facts/"),
 
-    new Planet(2.4, "plain", "Callisto", "Callisto is the second-largest moon of Jupiter."),
+    new Planet(2.4, "plain", "Callisto", "Callisto is the second-largest moon of Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA03456/PIA03456~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Voyager 1 & 2, Juno.", "https://science.nasa.gov/jupiter/moons/callisto/facts/"),
 
-    new Planet(58.232, "orange", "Saturn", "Saturn is the sixth planet from the Sun."),
+    new Planet(58.232, "orange", "Saturn", "Saturn is the sixth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA05380/PIA05380~orig.jpg' width='200px' height='200px'></img>", "9.5 AU from the Sun", "10759 Days in a year", "Pioneer 11, Voyager 1 & 2, Cassini & more.", "https://science.nasa.gov/saturn/facts/"),
 
-    new Planet(0, "plain", "Mimas", "Mimas is a moon of Saturn."),
+    new Planet(0, "plain", "Mimas", "Mimas is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA02267/PIA02267~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Cassini", "https://science.nasa.gov/saturn/moons/mimas/"),
 
-    new Planet(0, "plain", "Enceladus", "Enceladus is a moon of Saturn."),
+    new Planet(0, "plain", "Enceladus", "Enceladus is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/JPL-2015_10_28-PIA17202/JPL-2015_10_28-PIA17202~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Cassini", "https://science.nasa.gov/saturn/moons/enceladus/"),
 
-    new Planet(0, "plain", "Tethys", "Tethys is a moon of Saturn."),
+    new Planet(0, "plain", "Tethys", "Tethys is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA09723/PIA09723~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Pioneer 11, Voyager 1 & 2, Cassini", "https://science.nasa.gov/saturn/moons/tethys/"),
 
-    new Planet(0, "plain", "Dione", "Dione is a moon of Saturn."),
+    new Planet(0, "plain", "Dione", "Dione is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA09764/PIA09764~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Pioneer 11, Voyager 1 & 2, Cassini", "https://science.nasa.gov/saturn/moons/dione/"),
 
-    new Planet(0, "plain", "Rhea", "Rhea is a moon of Saturn."),
+    new Planet(0, "plain", "Rhea", "Rhea is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA09819/PIA09819~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Voyager 1 & 2, Cassini", "https://science.nasa.gov/saturn/moons/rhea/"),
 
-    new Planet(0, "plain", "Titan", "Titan is a moon of Saturn."),
+    new Planet(0, "plain", "Titan", "Titan is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA06220/PIA06220~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Cassini, Huygens & Dragonfly", "https://science.nasa.gov/saturn/moons/titan/facts/"),
 
-    new Planet(0, "plain", "Hyperion", "Hyperion is a moon of Saturn."),
+    new Planet(0, "plain", "Hyperion", "Hyperion is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA14583/PIA14583~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Cassini", "https://science.nasa.gov/saturn/moons/hyperion/"),
 
-    new Planet(0, "plain", "Iapetus", "Iapetus is a moon of Saturn."),
+    new Planet(0, "plain", "Iapetus", "Iapetus is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA06166/PIA06166~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Cassini", "https://science.nasa.gov/saturn/moons/iapetus/"),
 
     new Planet(25.362, "plain", "Uranus", "Uranus is the seventh planet from the Sun."),
 
@@ -332,12 +332,65 @@ function updateDistanceTravelled() {
     let distance = document.getElementById("webapp-main").scrollLeft;
     let distanceInKm = distance * 54437; // calculated based the the distance between the sun and the earth
     distanceTravelled.textContent = "Distance Travelled: " + distanceInKm + " km";
-    //styling
+    //styling 
     distanceTravelled.style.color = "#ec4926";
     distanceTravelled.style.textShadow = "2px 2px 3px #000000";
     distanceTravelled.style.fontFamily = "Reddit Sans, sans-serif";
     distanceTravelled.style.fontSize = "14px";
 })};
+
+async function getAPITest() {
+    let quoteList = await fetch('https://type.fit/api/quotes').then(response => response.json());
+    console.log(quoteList)
+
+
+    for (let i = 0; i < quoteList.length; i++) {
+        console.log(quoteList[i].text);
+    }
+
+}
+
+async function openAiApiTest() {
+    let url = 'https://api.openai.com/v1/chat/completions';
+    let apiKey = '';
+
+    let data = {
+        model: "gpt-3.5-turbo",  // Specify the model here
+
+        messages: [
+            {
+            "role": "user",
+            "content": [
+                {
+                "type": "text",
+                "text": "hello\n"
+                }
+            ]
+    }],
+
+        temperature: 1,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
+        max_tokens: 64,  // Maximum number of tokens to generate
+      };
+
+    let options = {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify(data)
+    };
+    let response = await fetch(url, options)
+    console.log(response.json().toString());
+   // .then(response => response.json())
+    //.then(data => console.log(data));
+    
+}
+
+openAiApiTest();
 
 
 
@@ -435,6 +488,7 @@ var barElement = document.getElementById("bar");
 generatePlanets(planets);
 searchForPlanet();
 updateDistanceTravelled();
+getAPITest();
 });
 
 // add a function to stop the user from highlighting text when they click and drag.
