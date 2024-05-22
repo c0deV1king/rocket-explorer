@@ -124,17 +124,17 @@ const planets = [
 
     new Planet(0, "plain", "Iapetus", "Iapetus is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA06166/PIA06166~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Cassini", "https://science.nasa.gov/saturn/moons/iapetus/"),
 
-    new Planet(25.362, "plain", "Uranus", "Uranus is the seventh planet from the Sun."),
+    new Planet(25.362, "plain", "Uranus", "Uranus is the seventh planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA18182/PIA18182~orig.jpg' width='200px' height='200px'></img>", "19 AU from the Sun", "30,687 Days in a year", "Voyager 2", "https://science.nasa.gov/uranus/facts/"),
 
-    new Planet(24.622, "blue", "Neptune", "Neptune is the eighth planet from the Sun."),
+    new Planet(24.622, "blue", "Neptune", "Neptune is the eighth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA01492/PIA01492~orig.jpg' width='200px' height='200px'></img>", "30 AU from the Sun", "60,190 Days in a year", "Voyager 2", "https://science.nasa.gov/neptune/facts/"),
 
-    new Planet(1.1883, "plain", "Pluto", "Pluto is the ninth planet from the Sun."),
+    new Planet(1.1883, "plain", "Pluto", "Pluto is the ninth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA19952/PIA19952~orig.jpg' width='200px' height='200px'></img>", "39 AU from the Sun", "90,560 Days in a year", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/facts/"),
 
-    new Planet(0, "plain", "Charon", "Charon is the largest of the five known natural satellites of the dwarf planet Pluto."),
+    new Planet(0, "plain", "Charon", "Charon is the largest of the five known natural satellites of the dwarf planet Pluto.", "<img src='https://images-assets.nasa.gov/image/PIA19968/PIA19968~orig.jpg' width='200px' height='200px'></img>", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/"),
 
-    new Planet(0, "plain", "Styx", "Styx is a moon of Pluto."),
+    new Planet(0, "plain", "Styx", "Styx is a moon of Pluto.", "<img src='https://upload.wikimedia.org/wikipedia/commons/3/38/Styx_%28moon%29.jpg' width='200px' height='200px'", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/styx/"),
 
-    new Planet(0, "plain", "Nix", "Nix is a moon of Pluto."),
+    new Planet(0, "plain", "Nix", "Nix is a moon of Pluto.", "<img src='https://images-assets.nasa.gov/image/PIA20287/PIA20287~orig.jpg' width='200px' height='200px'", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/nix/"),
 
     new Planet(0, "plain", "Kerberos", "Kerberos is a moon of Pluto."),
 
