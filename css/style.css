@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     /* white-space: pre-wrap; */
-    background: url(/img/webapp-background-v2.png);
+    background: url('../img/webapp-background-v2.png');
     height: 100vh;
     /* width: 100%; */
     text-align: center;
@@ -140,7 +140,7 @@ body {
 }
 
 .planet-details-popup {
-    background-image: url(/img/details-panel.png);
+    background-image: url('../img/details-panel.png');
 }
 
 /* planet base styles */
@@ -148,7 +148,7 @@ body {
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    background-image: url(/img/sun-planet.png);
+    background-image: url('../img/sun-planet.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -157,7 +157,7 @@ body {
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    background-image: url(/img/dwarf-planet-general.png);
+    background-image: url('../img/dwarf-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -166,7 +166,7 @@ body {
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    background-image: url(/img/gas-planet-general.png);
+    background-image: url('../img/gas-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -175,7 +175,7 @@ body {
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    background-image: url(/img/earth_planet.png);
+    background-image: url('../img/earth_planet.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -184,7 +184,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -193,7 +193,7 @@ body {
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    background-image: url(/img/dwarf-planet-general.png);
+    background-image: url('../img/dwarf-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -202,7 +202,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -211,7 +211,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -220,7 +220,7 @@ body {
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    background-image: url(/img/dwarf-planet-general.png);
+    background-image: url('../img/dwarf-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -229,7 +229,7 @@ body {
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    background-image: url(/img/gas-planet-general.png);
+    background-image: url('../img/gas-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -238,7 +238,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -247,7 +247,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -256,7 +256,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -265,7 +265,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -274,7 +274,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -283,7 +283,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -292,7 +292,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -301,7 +301,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -309,7 +309,7 @@ body {
 #planetSaturn {
     width: 512px;
     height: 512px;
-    background-image: url(/img/saturn-planet.png);
+    background-image: url('../img/saturn-planet.png');
     flex-grow: 0;
     flex-shrink: 0;
     
@@ -319,7 +319,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/rocky-moon-general.png);
+    background-image: url('../img/rocky-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -328,7 +328,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -337,7 +337,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -346,7 +346,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -355,7 +355,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -364,7 +364,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -373,7 +373,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -382,7 +382,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -391,7 +391,7 @@ body {
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    background-image: url(/img/ice-planet-general.png);
+    background-image: url('../img/ice-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -400,7 +400,7 @@ body {
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    background-image: url(/img/ice-planet-general.png);
+    background-image: url('../img/ice-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -409,7 +409,7 @@ body {
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    background-image: url(/img/dwarf-planet-general.png);
+    background-image: url('../img/dwarf-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -418,7 +418,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -427,7 +427,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -436,7 +436,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -445,7 +445,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -454,7 +454,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-image: url(/img/ice-moon-general.png);
+    background-image: url('../img/ice-moon-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -462,7 +462,7 @@ body {
 #planetHaumea {
     width: 128px;
     height: 128px;
-    background-image: url(/img/haumea-planet.png);
+    background-image: url('../img/haumea-planet.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -471,7 +471,7 @@ body {
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    background-image: url(/img/dwarf-planet-general.png);
+    background-image: url('../img/dwarf-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -480,7 +480,7 @@ body {
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    background-image: url(/img/dwarf-planet-general.png);
+    background-image: url('../img/dwarf-planet-general.png');
     flex-grow: 0;
     flex-shrink: 0;
 }
