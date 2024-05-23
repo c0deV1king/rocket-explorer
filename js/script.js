@@ -132,19 +132,19 @@ const planets = [
 
     new Planet(0, "plain", "Charon", "Charon is the largest of the five known natural satellites of the dwarf planet Pluto.", "<img src='https://images-assets.nasa.gov/image/PIA19968/PIA19968~orig.jpg' width='200px' height='200px'></img>", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/"),
 
-    new Planet(0, "plain", "Styx", "Styx is a moon of Pluto.", "<img src='https://upload.wikimedia.org/wikipedia/commons/3/38/Styx_%28moon%29.jpg' width='200px' height='200px'", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/styx/"),
+    new Planet(0, "plain", "Styx", "Styx is a moon of Pluto.", "<img src='https://upload.wikimedia.org/wikipedia/commons/3/38/Styx_%28moon%29.jpg' width='200px' height='200px'></img>", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/styx/"),
 
-    new Planet(0, "plain", "Nix", "Nix is a moon of Pluto.", "<img src='https://images-assets.nasa.gov/image/PIA20287/PIA20287~orig.jpg' width='200px' height='200px'", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/nix/"),
+    new Planet(0, "plain", "Nix", "Nix is a moon of Pluto.", "<img src='https://images-assets.nasa.gov/image/PIA20287/PIA20287~orig.jpg' width='200px' height='200px'></img>", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/nix/"),
 
-    new Planet(0, "plain", "Kerberos", "Kerberos is a moon of Pluto."),
+    new Planet(0, "plain", "Kerberos", "Kerberos is a moon of Pluto.", "<img src='https://images-assets.nasa.gov/image/PIA20034/PIA20034~orig.jpg' width='200px' height='200px'></img>", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/kerberos/"),
 
-    new Planet(0, "plain", "Hydra", "Hydra is a moon of Pluto."),
+    new Planet(0, "plain", "Hydra", "Hydra is a moon of Pluto.", "<img src='https://images-assets.nasa.gov/image/PIA19711/PIA19711~orig.jpg' width='200px' height='200px'></img>", "39 AU (Moon of Pluto)", "N/A", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/moons/hydra/"),
 
-    new Planet(0, "plain", "Haumea", "Haumea is a dwarf planet located beyond Neptune's orbit."),
+    new Planet(0, "plain", "Haumea", "Haumea is a dwarf planet located beyond Neptune's orbit.", "<img src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Haumea_Hubble.png' width='200px' height='200px'></img>", "43 AU from the sun", "104,096 Days in a year", "Hubble & New Horizons", "https://science.nasa.gov/dwarf-planets/haumea/"),
 
-    new Planet(0, "plain", "Makemake", "Makemake is a dwarf planet and perhaps the second largest Kuiper belt object."),
+    new Planet(0, "plain", "Makemake", "Makemake is a dwarf planet and perhaps the second largest Kuiper belt object.", "<img src='https://upload.wikimedia.org/wikipedia/commons/2/29/Makemake_and_its_moon.jpg' width='200px' height='200px'></img>", "45.8 AU from the Sun", "111,401 Days in a year", "Hubble & New Horizons", "https://science.nasa.gov/dwarf-planets/makemake/"),
     
-    new Planet(0, "plain", "Eris", "Eris is a dwarf planet in the scattered disc, a region beyond the Kuiper belt.")
+    new Planet(0, "plain", "Eris", "Eris is a dwarf planet in the scattered disc, a region beyond the Kuiper belt.", "<img src='https://upload.wikimedia.org/wikipedia/commons/1/1f/Hubble_Dysnomia_orbit_overlay.jpg' width='200px' height='200px'></img>", "68 AU from the Sun", "203,444 Days in a year", "Samuel Oschin Telescope", "https://science.nasa.gov/dwarf-planets/eris/")
 ]
 
 function generatingFog(planetDiv, planet){
