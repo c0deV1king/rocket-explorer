@@ -141,6 +141,18 @@ body {
 
 .planet-details-popup {
     background-image: url('../img/details-panel.png');
+    margin-bottom: 0;
+}
+
+.planet-details-popup > p {
+    width: 80%;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.planet-details-popup > a {
+    align-self: flex-start;
+    margin-left: 10%;
 }
 
 /* planet base styles */
@@ -492,6 +504,8 @@ body {
     transform: scale(1.03);
     transition: 0.5s;
 }
+
+
 
 /* Let us be mobile/tablet friendly! */
 /* Bootstrap breakpoints */

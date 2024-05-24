@@ -241,6 +241,7 @@ function generatePlanets(planetsList) {
         planetDetails.style.marginBottom = "5%";
         planetDetails.style.paddingTop = "25px";
         planetDetails.style.flexShrink = "0";
+        planetDetails.style.fontStretch = "condensed";
 
         // appending the elements to the html document
         
