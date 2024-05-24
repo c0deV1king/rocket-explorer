@@ -155,6 +155,26 @@ body {
     margin-left: 10%;
 }
 
+.close-button {
+    background-color: #ec4926;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 140px;
+    min-width: 100px;
+}
+
+.close-button > p {
+    display: flex;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.close-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 /* planet base styles */
 #planetSun {
     width: 256px;

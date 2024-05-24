@@ -157,6 +157,8 @@ function generatingFog(planetDiv, planet){
 }
 
 
+
+
 // a function with a for loop that dynamically generates planets on the html document
 function generatePlanets(planetsList) {
     // grabbing the element with the id "webapp-main" and assigning it to the variable webappMain
@@ -238,10 +240,15 @@ function generatePlanets(planetsList) {
         planetDetails.style.width = "250px";
         planetDetails.style.height = "500px";
         planetDetails.style.borderRadius = "10px";
-        planetDetails.style.marginBottom = "5%";
+        //planetDetails.style.marginBottom = "5%";
         planetDetails.style.paddingTop = "25px";
         planetDetails.style.flexShrink = "0";
-        planetDetails.style.fontStretch = "condensed";
+
+        // button to close the planet details
+        let detailCloseButton = document.createElement("div");
+        detailCloseButton.innerHTML = "<p>Close Details</p>";
+        detailCloseButton.className = "close-button";
+        detailCloseButton.id = planet.name.toLowerCase() + "CloseButton";
 
         // appending the elements to the html document
         
@@ -249,6 +256,7 @@ function generatePlanets(planetsList) {
         outerDiv.appendChild(contentTitle);
         outerDiv.appendChild(contentDescription);
         outerDiv.appendChild(planetDetails);
+        outerDiv.appendChild(detailCloseButton);
         webappMain.appendChild(outerDiv);
     }
     // calling the addEventListeners function to add event listeners to the planets
@@ -284,21 +292,45 @@ function addEventListeners(planetsList) {
 // console log for debugging/testing
 function planetClickDetails(planetDiv, planet) {
     let detailBox = document.getElementById(planet.name.toLowerCase() + "Details");
+    let detailCloseButton = document.getElementById(planet.name.toLowerCase() + "CloseButton");
 
     detailBox.style.display = "none";
+    planetDiv.style.display = "flex";
+    detailCloseButton.style.display = "none";
 
     planetDiv.addEventListener("click", (event) => {
             
         if (detailBox.style.display === "none") {
             detailBox.style.display = "flex";
+            planetDiv.style.display = "none";
+            detailCloseButton.style.display = "flex";
             console.log("planet clicked:", planet.name + " Showing details...");
     }
         else {
             detailBox.style.display = "none";
+            planetDiv.style.display = "flex";
+            detailCloseButton.style.display = "none";
             console.log("planet clicked:", planet.name + " Hiding details...");
         }
     });
+
+    detailCloseButton.addEventListener("click", (event) => {
+
+        if (detailBox.style.display === "flex") {
+            detailBox.style.display = "none";
+            planetDiv.style.display = "flex";
+            detailCloseButton.style.display = "none";
+            console.log("planet clicked:", planet.name + " Hiding details...");
+        }
+        else {
+            detailBox.style.display = "flex";
+            planetDiv.style.display = "none";
+            detailCloseButton.style.display = "flex";
+            console.log("planet clicked:", planet.name + " Showing details...");
+        }
+    });
 }
+
 
 function findPlanet() {
     let input = document.getElementById("searchInput").value;
@@ -485,6 +517,8 @@ var barElement = document.getElementById("bar");
             barElement.style.width = percentageScrolled + "%";
         }
     };
+
+
     
 generatePlanets(planets);
 searchForPlanet();
