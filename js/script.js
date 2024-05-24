@@ -447,6 +447,8 @@ let scrollLeft;
 // a event + a function, listening for when my left mouse button is clicked down and held.
 // the e in brackets is short for event, just a quicker way to write it.
 clickAndDragScroll.addEventListener("mousedown", function(e) {
+    // prevents the default action of the event (highlighting text in this case)
+    e.preventDefault();
     // the value is being set to true, now that my mouse is clicked down.
     isDown = true;
     // assigning a value to the variable startX. it is the x position of the mouse on the page minus the left offset of the element.
