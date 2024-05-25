@@ -23,17 +23,38 @@
 </head>
 <body id="mainPage">
 
-    <div class="webapp-main w-100" id="webapp-main">
 
-        <div class="container" id="welcome-banner">
-            <p id="title">Rocket Explorer</p>
-            <p>Made with <span style="color: #ec4926;">love</span> by c0dev1king</p>
-
-            <div class="row row-cols-2" id="scroll-instructions">
-                <p class="col w-75 pt-2" id="instruction-text">Click & drag or swipe to start exploring</p>
-                <img class="col gx-0" src="img/triple-arrow-right.png" alt="arrow-right" id="arrow-right">
+    <div class="start-screen" id="start-screen">
+        <div class="container row-cols-3" id="start-screen-container">
+            <img id="start-screen-image" src="/img/website-test-icon.png" alt="rocket-icon" id="rocket-icon">
+            <h1 id="start-screen-title">Rocket Explorer</h1>
+            <p id="start-screen-subtitle">Made with <span style="color: #ec4926;">love</span> by c0dev1king</p>
+            <button class="row-2" id="start-button">Start Exploring</button>
+            <div id="start-menu-links">
+                <a href="https://github.com/c0deV1king/rocket-explorer"><img src="/img/github.svg"></a>
+                    <p>Github</p>
+                <a id="info-page-button"><img src="/img/info-circle.svg"></a>
+                    <p>More Info</p>
+                <a href="http://codeviking.io/"><img src="/img/link-45deg.svg"></a>
+                    <p>Portfolio</p>
             </div>
         </div>
+    </div>
+
+    <div class="more-info-page" id="more-info-page">
+        <div id="more-info-container">
+            <h1>What is Rocket Explorer?</h1>
+            <p>An interactive side scrolling webapp, showcasing the most well known planets/moons/stars and man-made objects 
+                such as satellites and rockets. Rocket Explorer is intended to be educational and a learning experince for me, 
+                the creator, but welcomes anyone to enjoy the content and maybe learn something new about the solar system!</p>
+            <p>This is a project created for the bootcamp GetCoding based in east coast Canada with the intention of training me
+                to become a software developer.</p>
+            
+            <button id="close-more-info">Return</button>
+        </div>
+    </div>
+
+    <div class="webapp-main w-100" id="webapp-main">
 
         <div class="progress-bar" id="progress-bar">
             <div class="bar" id="bar"></div>

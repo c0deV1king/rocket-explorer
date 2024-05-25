@@ -5,8 +5,125 @@ body {
     background-color: black;
 }
 
-.webapp-main {
+#start-screen {
     display: flex;
+    z-index: 100;
+    background-image: url('../img/webapp-background-v2.png');
+}
+
+#start-screen-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#start-screen-image {
+    width: 100px;
+    height: 100px;
+}
+
+#start-screen-image:hover {
+    transform: scale(1.05);
+}
+
+#start-screen-subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+    
+}
+
+#start-button {
+    width: 200px;
+    border: #ec4926 2px solid;
+    background: none;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition-duration: 0.5s;
+}
+
+#start-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+#start-menu-links {
+    margin-top: 20px;
+    min-width: 250px;
+    
+}
+
+#start-menu-links > a {
+    margin: 30px;
+}
+
+#start-menu-links > a :hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#start-menu-links > a > img {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0) brightness(100%) contrast(100%);
+}
+
+#more-info-page {
+    background-image: url('../img/webapp-background-v2.png');
+    max-width: 100%;
+    height: 100vh;
+    color: white;
+    display: none;
+}
+
+#more-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#more-info-container > h1 {
+    font-size: 50px;
+}
+
+#more-info-container > p {
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+#close-more-info {
+    width: 200px;
+    border: #ec4926 2px solid;
+    background: none;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition-duration: 0.5s;
+}
+
+#close-more-info:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.webapp-main {
+    display: none;
     align-items: center;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -538,6 +655,15 @@ body {
     .progress-bar {
         top: 85%;
     }
+    #more-info-container {
+        width: 50%;
+    }
+    #more-info-container > h1 {
+        font-size: 50px;
+    }
+    #more-info-container > p {
+        font-size: 30px;
+    }
 }
 
 /* Normal Monitors */
@@ -548,6 +674,15 @@ body {
     .progress-bar {
         top: 85%;
     }
+    #more-info-container {
+        width: 80%;
+    }
+    #more-info-container > h1 {
+        font-size: 50px;
+    }
+    #more-info-container > p {
+        font-size: 30px;
+    }
 }
 
 /* Small Monitors/laptops */
@@ -557,6 +692,15 @@ body {
     }
     .progress-bar {
         top: 85%;
+    }
+    #more-info-container {
+        width: 80%;
+    }
+    #more-info-container > h1 {
+        font-size: 40px;
+    }
+    #more-info-container > p {
+        font-size: 25px;
     }
 }
 
@@ -570,6 +714,15 @@ body {
     }
     #webapp-main {
         padding-left: 18%;
+    }
+    #more-info-container {
+        width: 80%;
+    }
+    #more-info-container > h1 {
+        font-size: 40px;
+    }
+    #more-info-container > p {
+        font-size: 25px;
     }
 }
 
@@ -587,6 +740,15 @@ body {
     #title {
         text-align: center;
         font-size: 50px;
+    }
+    #more-info-container {
+        width: 80%;
+    }
+    #more-info-container > h1 {
+        font-size: 40px;
+    }
+    #more-info-container > p {
+        font-size: 20px;
     }
 }
 
@@ -611,6 +773,15 @@ body {
     #title {
         font-size: 30px;
         width: 250px;
+    }
+    #more-info-container {
+        width: 80%;
+    }
+    #more-info-container > h1 {
+        font-size: 30px;
+    }
+    #more-info-container > p {
+        font-size: 15px;
     }
 }
 

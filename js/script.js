@@ -294,9 +294,20 @@ function planetClickDetails(planetDiv, planet) {
     let detailBox = document.getElementById(planet.name.toLowerCase() + "Details");
     let detailCloseButton = document.getElementById(planet.name.toLowerCase() + "CloseButton");
 
+    let quickMenu = document.getElementById("quick-menu");
+
+    let startMenuButton = document.getElementById("start-button");
+    let moreInfoButton = document.getElementById("info-page-button");
+    let moreInfoCloseButton = document.getElementById("close-more-info");
+
+    let startScreen = document.getElementById("start-screen");
+    let webappMain = document.getElementById("webapp-main");
+    let moreInfoPage = document.getElementById("more-info-page");
+
     detailBox.style.display = "none";
     planetDiv.style.display = "flex";
     detailCloseButton.style.display = "none";
+    quickMenu.style.visibility = "hidden";
 
     planetDiv.addEventListener("click", (event) => {
             
@@ -327,6 +338,43 @@ function planetClickDetails(planetDiv, planet) {
             planetDiv.style.display = "none";
             detailCloseButton.style.display = "flex";
             console.log("planet clicked:", planet.name + " Showing details...");
+        }
+    });
+
+    startMenuButton.addEventListener("click", (event) => {
+
+        if (startMenuButton.style.display === "block") {
+            startMenuButton.style.display = "none";
+            quickMenu.style.visibility = "visible";
+            startScreen.style.display = "none";
+            webappMain.style.display = "flex";
+        }
+        else {
+            startMenuButton.style.display = "block";
+            quickMenu.style.visibility = "hidden";
+            startScreen.style.display = "flex";
+            webappMain.style.display = "none";
+        }
+    });
+
+    moreInfoButton.addEventListener("click", (event) => {
+
+        if (moreInfoPage.style.display === "none") {
+            moreInfoPage.style.display = "flex";
+            startScreen.style.display = "none";
+        }
+        else {
+            moreInfoPage.style.display = "none";
+            startScreen.style.display = "flex";
+        }
+    });
+
+    moreInfoCloseButton.addEventListener("click", (event) => {
+
+        if (moreInfoPage.style.display === "flex") {
+            moreInfoPage.style.display = "none";
+            startScreen.style.display = "flex";
+            console.log("Hiding more info page clicked");
         }
     });
 }
@@ -366,9 +414,7 @@ function updateDistanceTravelled() {
     let distanceInKm = distance * 54437; // calculated based the the distance between the sun and the earth
     distanceTravelled.textContent = "Distance Travelled: " + distanceInKm + " km";
     //styling 
-    distanceTravelled.style.color = "#ec4926";
     distanceTravelled.style.textShadow = "2px 2px 3px #000000";
-    distanceTravelled.style.fontFamily = "Reddit Sans, sans-serif";
     distanceTravelled.style.fontSize = "14px";
 })};
 
