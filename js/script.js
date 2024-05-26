@@ -418,59 +418,111 @@ function updateDistanceTravelled() {
     distanceTravelled.style.fontSize = "14px";
 })};
 
-async function getAPITest() {
-    let quoteList = await fetch('https://type.fit/api/quotes').then(response => response.json());
-    console.log(quoteList)
+
+const previousContext = [];  // Array to hold the conversation history
+const apiKey = 'sk-proj.......';
 
 
-    for (let i = 0; i < quoteList.length; i++) {
-        console.log(quoteList[i].text);
-    }
-
-}
-
-async function openAiApiTest() {
+async function sendMessageToAi(userMessage) {
     let url = 'https://api.openai.com/v1/chat/completions';
-    let apiKey = '';
+
+
+    // Append the user message to the previous context
+    previousContext.push({ role: "user", content: { text: userMessage } });
+
 
     let data = {
         model: "gpt-3.5-turbo",  // Specify the model here
-
-        messages: [
-            {
-            "role": "user",
-            "content": [
-                {
-                "type": "text",
-                "text": "hello\n"
-                }
-            ]
-    }],
-
+        messages: previousContext,  // Include all previous interactions
         temperature: 1,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-        max_tokens: 64,  // Maximum number of tokens to generate
-      };
+        max_tokens: 64
+    };
+
 
     let options = {
         method: 'POST',
         headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
         },
         body: JSON.stringify(data)
     };
-    let response = await fetch(url, options)
-    console.log(response.json().toString());
-   // .then(response => response.json())
-    //.then(data => console.log(data));
-    
+
+
+    try {
+        let response = await fetch(url, options);
+        let responseData = await response.json();  // Wait for the JSON parse to complete
+        let aiResponse = responseData.choices[0].message.content.text;  // Accessing the text of the AI's response
+
+
+        // Append AI's response to the conversation context
+        previousContext.push({ role: "assistant", content: { text: aiResponse } });
+
+
+        // Maintain the previousContext size to a maximum of 25 items
+        while (previousContext.length > 25) {
+            previousContext.shift();  // Remove the oldest interaction
+        }
+
+
+        console.log("AI Response:");
+        console.log(aiResponse);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}    
+ 
+async function openAiApiTest() {
+    let url = 'https://api.openai.com/v1/chat/completions';
+
+
+    let data = {
+        model: "gpt-3.5-turbo",  // Specify the model here
+        messages: [{
+            "role": "user",
+            "content": [{
+                "type": "text",
+                "text": "What is a DOM in context of JS?\n"
+            }]
+        }],
+        temperature: 1,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
+        max_tokens: 1000
+    };
+
+
+    let options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify(data)
+    };
+
+            //threading
+    try {
+        let response = await fetch(url, options);
+        let responseData = await response.json();  // Wait for the JSON parse to complete
+        console.log("Full Response Json");
+        console.log(responseData);  // This prints the entire JSON response data
+
+
+        // To specifically print the most recent response message:
+        let recentResponse = responseData.choices[0].message;
+        console.log("AI Response");
+        console.log(recentResponse.content);
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 openAiApiTest();
-
 
 
     
@@ -571,7 +623,6 @@ var barElement = document.getElementById("bar");
 generatePlanets(planets);
 searchForPlanet();
 updateDistanceTravelled();
-getAPITest();
 });
 
 // add a function to stop the user from highlighting text when they click and drag.
