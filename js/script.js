@@ -100,13 +100,13 @@ const planets = [
 
     new Planet(1.821, "plain", "Io", "Io is the innermost of the four Galilean moons of the planet Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA00738/PIA00738~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Pioneer 10 & 11, Voyager 1 & 2 & more.", "https://science.nasa.gov/jupiter/moons/io/facts/"),
 
-    new Planet(1.56, "white", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA25695/PIA25695~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Pioneer 10 & 11, Juno, Europa Clipper & more.", "https://science.nasa.gov/jupiter/moons/europa/facts/"),
+    new Planet(1.56, "plain", "Europa", "Europa is the smallest of the four Galilean moons orbiting Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA25695/PIA25695~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Pioneer 10 & 11, Juno, Europa Clipper & more.", "https://science.nasa.gov/jupiter/moons/europa/facts/"),
 
     new Planet(2.634, "plain", "Ganymede", "Ganymede is the largest moon of Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA24681/PIA24681~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Pioneer 11, Voyager 1 & 2, Galileo.", "https://science.nasa.gov/jupiter/moons/ganymede/facts/"),
 
     new Planet(2.4, "plain", "Callisto", "Callisto is the second-largest moon of Jupiter.", "<img src='https://images-assets.nasa.gov/image/PIA03456/PIA03456~orig.jpg' width='200px' height='200px'></img>", "5.2 AU (Moon of Jupiter)", "N/A", "Voyager 1 & 2, Juno.", "https://science.nasa.gov/jupiter/moons/callisto/facts/"),
 
-    new Planet(58.232, "orange", "Saturn", "Saturn is the sixth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA05380/PIA05380~orig.jpg' width='200px' height='200px'></img>", "9.5 AU from the Sun", "10759 Days in a year", "Pioneer 11, Voyager 1 & 2, Cassini & more.", "https://science.nasa.gov/saturn/facts/"),
+    new Planet(58.232, "plain", "Saturn", "Saturn is the sixth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA05380/PIA05380~orig.jpg' width='200px' height='200px'></img>", "9.5 AU from the Sun", "10759 Days in a year", "Pioneer 11, Voyager 1 & 2, Cassini & more.", "https://science.nasa.gov/saturn/facts/"),
 
     new Planet(0, "plain", "Mimas", "Mimas is a moon of Saturn.", "<img src='https://images-assets.nasa.gov/image/PIA02267/PIA02267~orig.jpg' width='200px' height='200px'></img>", "9.5 AU (Moon of Saturn)", "N/A", "Cassini", "https://science.nasa.gov/saturn/moons/mimas/"),
 
@@ -126,7 +126,7 @@ const planets = [
 
     new Planet(25.362, "plain", "Uranus", "Uranus is the seventh planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA18182/PIA18182~orig.jpg' width='200px' height='200px'></img>", "19 AU from the Sun", "30,687 Days in a year", "Voyager 2", "https://science.nasa.gov/uranus/facts/"),
 
-    new Planet(24.622, "blue", "Neptune", "Neptune is the eighth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA01492/PIA01492~orig.jpg' width='200px' height='200px'></img>", "30 AU from the Sun", "60,190 Days in a year", "Voyager 2", "https://science.nasa.gov/neptune/facts/"),
+    new Planet(24.622, "plain", "Neptune", "Neptune is the eighth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA01492/PIA01492~orig.jpg' width='200px' height='200px'></img>", "30 AU from the Sun", "60,190 Days in a year", "Voyager 2", "https://science.nasa.gov/neptune/facts/"),
 
     new Planet(1.1883, "plain", "Pluto", "Pluto is the ninth planet from the Sun.", "<img src='https://images-assets.nasa.gov/image/PIA19952/PIA19952~orig.jpg' width='200px' height='200px'></img>", "39 AU from the Sun", "90,560 Days in a year", "New Horizons", "https://science.nasa.gov/dwarf-planets/pluto/facts/"),
 
@@ -233,7 +233,7 @@ function generatePlanets(planetsList) {
         let planetDetails = document.createElement("div");
         planetDetails.className = "planet-details-popup";
         planetDetails.id = planet.name.toLowerCase() + "Details";
-        planetDetails.style.color = "white";
+        planetDetails.style.color = "black";
         // generates the content for the planet details
         planetDetails.innerHTML = "<p>" + planet.image + "</p>" + "<p>" + planet.au + "</p>" + "<p>" + planet.yearLength + "</p>" + "<p>" + planet.missions + "</p>" + "<a href=" + planet.link + ">More Info</a>";
         planetDetails.style.flexDirection = "column";
