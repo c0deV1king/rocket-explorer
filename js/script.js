@@ -280,7 +280,7 @@ function searchForPlanet() {
             searchBar.style.visibility = "hidden";
     }});
 
-    searchBar.addEventListener("keyup", (event) => {
+    searchIcon.addEventListener("keyup", (event) => {
         if (event.key === "Enter") {
            console.log("Showing search bar...")
            searchBar.style.visibility = "visible";
@@ -309,11 +309,11 @@ function planetClickDetails(planetDiv, planet) {
     let detailCloseButton = document.getElementById(planet.name.toLowerCase() + "CloseButton");
 
     let quickMenu = document.getElementById("quick-menu");
+    let inputBox = document.getElementById("searchInput");
 
     let startMenuButton = document.getElementById("start-button");
     let moreInfoButton = document.getElementById("info-page-button");
     let moreInfoCloseButton = document.getElementById("close-more-info");
-    let searchIcon = document.getElementById("searchIcon");
 
     let startScreen = document.getElementById("start-screen");
     let webappMain = document.getElementById("webapp-main");
@@ -459,6 +459,12 @@ function planetClickDetails(planetDiv, planet) {
             startScreen.style.display = "flex";
             console.log("Hiding more info page clicked");
         }
+    });
+
+    inputBox.addEventListener("click", (event) => {
+        if (quickMenu.style.visibility === "visible")
+            inputBox.focus();
+            console.log("Focusing input box")
     });
 }
 
@@ -702,6 +708,7 @@ var barElement = document.getElementById("bar");
             barElement.style.width = percentageScrolled + "%";
         }
     };
+
 
 
     
