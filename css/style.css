@@ -644,6 +644,11 @@ body {
     transition: 0.5s;
 }
 
+/* focus pseudo class for accessibility */
+[id^="planet"]:focus {
+    border: #ec4926 5px solid;
+}
+
 
 
 /* Let us be mobile/tablet friendly! */
