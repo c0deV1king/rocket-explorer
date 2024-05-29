@@ -245,7 +245,8 @@ body {
 /* styling search bar to look better */
 #searchInput {
     background-color: #ec4926;
-    opacity: 0.5;
+    opacity: 0.9;
+    
 }
 
 /* focus pseudo class, it applies when clicked on */
