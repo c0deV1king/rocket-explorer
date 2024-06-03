@@ -388,6 +388,12 @@ function planetClickDetails(planetDiv, planet) {
             }
         }});
 
+        inputBox.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                findPlanet();
+            }
+        });
+
 
 
         // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -486,10 +492,20 @@ function findPlanet() {
         console.log("We couldn't find the planet");
         searchBar.style.visibility = "hidden";
     }
+
+
 }
+
 
 function snapToPlanet(planetObject) {
     planetObject.scrollIntoView({behavior: "smooth", block: "center", inline: "center"}); // block is horizontal, inline is vertical
+}
+
+function lookForPlanet(planet, event) {
+        if (event.key === "Enter") {
+            snapToPlanet(document.getElementById("planet" + planet.name));
+            console.log("Found " + planet.name);
+        }
 }
 
 // show and update text based on the kilometers we have travelled in space relative to the pixels we have scrolled
@@ -613,8 +629,6 @@ async function openAiApiTest() {
     }
 }
 
-openAiApiTest();
-
 
     
 // click and drag scrolling
@@ -701,10 +715,8 @@ var barElement = document.getElementById("bar");
 // onscroll event to find the scroll position and applying it to some css to animate the progress bar
     if (scrollBar) {
         scrollBar.onscroll = function() {
-            console.log("Hor Scroll Position:", scrollBar.scrollLeft);
                 // calculating the percentage of the scroll position
             let percentageScrolled = (scrollBar.scrollLeft / (scrollBar.scrollWidth - webappWidth)) * 100;
-            console.log("Percentage Scrolled:", percentageScrolled);
             barElement.style.width = percentageScrolled + "%";
         }
     };
