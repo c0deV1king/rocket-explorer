@@ -251,6 +251,10 @@ function generatePlanets(planetsList) {
         detailCloseButton.id = planet.name.toLowerCase() + "CloseButton";
         detailCloseButton.setAttribute('tabindex', '0');
 
+        // moving an existing element to the end of the document
+        const searchBarMove = document.getElementById("planetSearchBar");
+
+
         // appending the elements to the html document
         
         outerDiv.appendChild(planetDiv);
@@ -258,6 +262,7 @@ function generatePlanets(planetsList) {
         outerDiv.appendChild(contentDescription);
         outerDiv.appendChild(planetDetails);
         outerDiv.appendChild(detailCloseButton);
+        outerDiv.appendChild(searchBarMove);
         webappMain.appendChild(outerDiv);
     }
     // calling the addEventListeners function to add event listeners to the planets
@@ -508,6 +513,16 @@ function lookForPlanet(planet, event) {
         }
 }
 
+function randomPlanet(planet) {
+    let randomArray = Math.floor(Math.random() * planet.length);
+    let randomPlanet = planet[randomArray];
+
+    console.log("Random Planet Found: " + randomPlanet.name);
+    snapToPlanet(document.getElementById("planet" + randomPlanet.name));
+};
+
+
+
 // show and update text based on the kilometers we have travelled in space relative to the pixels we have scrolled
 // 1 pixel = 54437 km
 // 2682px = distance from the sun to the earth
@@ -630,7 +645,25 @@ async function openAiApiTest() {
 }
 
 
-    
+
+// smooth scrolling and momentum breakdown
+// 1. get the velocity
+// 2. apply momentum to the scroll after the user releases the mouse
+// 3. apply a deceleration to the velocity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // click and drag scrolling
 // document(points towards the html document)
 // addEventListener(called a "method". It basically listens for an event that is inputed in the code, in the brackets)
@@ -647,6 +680,8 @@ console.log("clickAndDragScroll:", clickAndDragScroll);
 let isDown = false;
 let startX;
 let scrollLeft;
+let velocity;
+
 // a event + a function, listening for when my left mouse button is clicked down and held.
 // the e in brackets is short for event, just a quicker way to write it.
 clickAndDragScroll.addEventListener("mousedown", function(e) {
@@ -658,6 +693,9 @@ clickAndDragScroll.addEventListener("mousedown", function(e) {
     startX = e.pageX - clickAndDragScroll.offsetLeft;
     // assigning a value to the variable scrollLeft. it is the current scroll position of the element.
     scrollLeft = clickAndDragScroll.scrollLeft;
+
+    // adding a smooth scroll to the click and drag scroll
+
 });
 // same as above but it is listening for the user to release the left mouse button.
 clickAndDragScroll.addEventListener("mouseleave", function() {
