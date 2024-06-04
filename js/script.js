@@ -235,7 +235,7 @@ function generatePlanets(planetsList) {
         planetDetails.id = planet.name.toLowerCase() + "Details";
         planetDetails.style.color = "black";
         // generates the content for the planet details
-        planetDetails.innerHTML = "<p>" + planet.image + "</p>" + "<p>" + planet.au + "</p>" + "<p>" + planet.yearLength + "</p>" + "<p>" + planet.missions + "</p>" + "<a href=" + planet.link + ">More Info</a>";
+        planetDetails.innerHTML = "<p>" + planet.image + "</p>" + "<p>" + planet.au + "</p>" + "<p>" + planet.yearLength + "</p>" + "<p>" + planet.missions + "</p>" + "<a href=" + planet.link + " target='_blank' rel='noopener noreferrer'>More Info</a>";
         planetDetails.style.flexDirection = "column";
         planetDetails.style.width = "250px";
         planetDetails.style.height = "500px";
