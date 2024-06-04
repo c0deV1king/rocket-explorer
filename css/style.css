@@ -134,6 +134,7 @@ body {
     text-align: center;
     padding-left: 35%;
     font-family: "Pixelify Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 #welcome-banner {

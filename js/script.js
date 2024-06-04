@@ -663,7 +663,6 @@ async function openAiApiTest() {
 
 
 
-
 // click and drag scrolling
 // document(points towards the html document)
 // addEventListener(called a "method". It basically listens for an event that is inputed in the code, in the brackets)
@@ -680,7 +679,7 @@ console.log("clickAndDragScroll:", clickAndDragScroll);
 let isDown = false;
 let startX;
 let scrollLeft;
-let velocity;
+
 
 // a event + a function, listening for when my left mouse button is clicked down and held.
 // the e in brackets is short for event, just a quicker way to write it.
@@ -694,7 +693,6 @@ clickAndDragScroll.addEventListener("mousedown", function(e) {
     // assigning a value to the variable scrollLeft. it is the current scroll position of the element.
     scrollLeft = clickAndDragScroll.scrollLeft;
 
-    // adding a smooth scroll to the click and drag scroll
 
 });
 // same as above but it is listening for the user to release the left mouse button.
@@ -715,7 +713,6 @@ clickAndDragScroll.addEventListener("mousemove", function(e) {
     const scroll = x - startX;
     clickAndDragScroll.scrollLeft = scrollLeft - scroll;
 });
-
 // Touch Screen Support yay!
 // Basically a copy and paste from the click and drag scrolling but with touch events instead of mouse events.
 const webAppTouch = document.getElementById("webapp-main");
